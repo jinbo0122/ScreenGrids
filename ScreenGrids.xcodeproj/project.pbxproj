@@ -17,6 +17,7 @@
 		4B4574031504C1A3002BDEB4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4573E31504C1A2002BDEB4 /* Cocoa.framework */; };
 		4B45740B1504C1A3002BDEB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B4574091504C1A3002BDEB4 /* InfoPlist.strings */; };
 		4B45740E1504C1A3002BDEB4 /* ScreenGridsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B45740D1504C1A3002BDEB4 /* ScreenGridsTests.m */; };
+		4B72E622153305FB00A8E1B5 /* DataComputing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E621153305FB00A8E1B5 /* DataComputing.m */; };
 		4B94837E152EA6030051DC12 /* SGMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B94837C152EA6030051DC12 /* SGMenuViewController.m */; };
 		4B94837F152EA6030051DC12 /* SGMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B94837D152EA6030051DC12 /* SGMenuViewController.xib */; };
 		4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B948381152EAE5F0051DC12 /* StatusBar.png */; };
@@ -53,6 +54,8 @@
 		4B45740A1504C1A3002BDEB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B45740C1504C1A3002BDEB4 /* ScreenGridsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenGridsTests.h; sourceTree = "<group>"; };
 		4B45740D1504C1A3002BDEB4 /* ScreenGridsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenGridsTests.m; sourceTree = "<group>"; };
+		4B72E620153305FB00A8E1B5 /* DataComputing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataComputing.h; sourceTree = "<group>"; };
+		4B72E621153305FB00A8E1B5 /* DataComputing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataComputing.m; sourceTree = "<group>"; };
 		4B94837B152EA6030051DC12 /* SGMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMenuViewController.h; sourceTree = "<group>"; };
 		4B94837C152EA6030051DC12 /* SGMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMenuViewController.m; sourceTree = "<group>"; };
 		4B94837D152EA6030051DC12 /* SGMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGMenuViewController.xib; sourceTree = "<group>"; };
@@ -123,10 +126,11 @@
 		4B4573E91504C1A2002BDEB4 /* ScreenGrids */ = {
 			isa = PBXGroup;
 			children = (
-				4B948377152EA5110051DC12 /* UI */,
 				4B4573F51504C1A2002BDEB4 /* ALAppDelegate.h */,
 				4B4573F61504C1A2002BDEB4 /* ALAppDelegate.m */,
 				4B4573F81504C1A3002BDEB4 /* MainMenu.xib */,
+				4B948377152EA5110051DC12 /* UI */,
+				4B72E6241533061200A8E1B5 /* Logic */,
 				4B948380152EAE040051DC12 /* Resource */,
 				4B4573EA1504C1A2002BDEB4 /* Supporting Files */,
 			);
@@ -161,6 +165,15 @@
 				4B4574091504C1A3002BDEB4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B72E6241533061200A8E1B5 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				4B72E620153305FB00A8E1B5 /* DataComputing.h */,
+				4B72E621153305FB00A8E1B5 /* DataComputing.m */,
+			);
+			name = Logic;
 			sourceTree = "<group>";
 		};
 		4B948377152EA5110051DC12 /* UI */ = {
@@ -297,6 +310,7 @@
 				4B4573F01504C1A2002BDEB4 /* main.m in Sources */,
 				4B4573F71504C1A2002BDEB4 /* ALAppDelegate.m in Sources */,
 				4B94837E152EA6030051DC12 /* SGMenuViewController.m in Sources */,
+				4B72E622153305FB00A8E1B5 /* DataComputing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

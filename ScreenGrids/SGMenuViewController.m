@@ -46,6 +46,6 @@
   [NSApp terminate:nil];
 }
 - (IBAction)preferencesClick:(id)sender{
-
+  [DataComputing sizeOfGrids];
 }
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "DataComputing.h"
 @interface SGMenuViewController : NSViewController
 {
   NSStatusItem *statusItem;
