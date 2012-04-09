@@ -20,6 +20,7 @@
 		4B94837E152EA6030051DC12 /* SGMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B94837C152EA6030051DC12 /* SGMenuViewController.m */; };
 		4B94837F152EA6030051DC12 /* SGMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B94837D152EA6030051DC12 /* SGMenuViewController.xib */; };
 		4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B948381152EAE5F0051DC12 /* StatusBar.png */; };
+		4BFAB6681532B441008042BB /* Statusbar_alternate.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFAB6671532B441008042BB /* Statusbar_alternate.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		4B94837C152EA6030051DC12 /* SGMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMenuViewController.m; sourceTree = "<group>"; };
 		4B94837D152EA6030051DC12 /* SGMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGMenuViewController.xib; sourceTree = "<group>"; };
 		4B948381152EAE5F0051DC12 /* StatusBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusBar.png; path = Resource/StatusBar.png; sourceTree = "<group>"; };
+		4BFAB6671532B441008042BB /* Statusbar_alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Statusbar_alternate.png; path = Resource/Statusbar_alternate.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				4B948381152EAE5F0051DC12 /* StatusBar.png */,
+				4BFAB6671532B441008042BB /* Statusbar_alternate.png */,
 				4B4573F21504C1A2002BDEB4 /* Credits.rtf */,
 			);
 			name = Resource;
@@ -256,6 +259,7 @@
 				4B4573FA1504C1A3002BDEB4 /* MainMenu.xib in Resources */,
 				4B94837F152EA6030051DC12 /* SGMenuViewController.xib in Resources */,
 				4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */,
+				4BFAB6681532B441008042BB /* Statusbar_alternate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

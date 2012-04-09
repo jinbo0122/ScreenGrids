@@ -32,7 +32,7 @@
   
   statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:30.0f];
   [statusItem setImage:[NSImage imageNamed:@"StatusBar"]];
-  [statusItem setAlternateImage:[NSImage imageNamed:@"StatusBar"]];
+  [statusItem setAlternateImage:[NSImage imageNamed:@"Statusbar_alternate"]];
   [statusItem setHighlightMode:YES];
   [statusItem setToolTip:@"ScreenGrids"];
   [statusItem setMenu:MainMenu];
