@@ -7,9 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "SGMenuViewController.h"
 @interface ALAppDelegate : NSObject <NSApplicationDelegate>
-
+{
+  SGMenuViewController *mainVC;
+}
 @property (assign) IBOutlet NSWindow *window;
-
 @end

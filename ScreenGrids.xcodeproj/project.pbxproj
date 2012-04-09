@@ -17,6 +17,9 @@
 		4B4574031504C1A3002BDEB4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4573E31504C1A2002BDEB4 /* Cocoa.framework */; };
 		4B45740B1504C1A3002BDEB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B4574091504C1A3002BDEB4 /* InfoPlist.strings */; };
 		4B45740E1504C1A3002BDEB4 /* ScreenGridsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B45740D1504C1A3002BDEB4 /* ScreenGridsTests.m */; };
+		4B94837E152EA6030051DC12 /* SGMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B94837C152EA6030051DC12 /* SGMenuViewController.m */; };
+		4B94837F152EA6030051DC12 /* SGMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B94837D152EA6030051DC12 /* SGMenuViewController.xib */; };
+		4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B948381152EAE5F0051DC12 /* StatusBar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +38,24 @@
 		4B4573E61504C1A2002BDEB4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		4B4573E71504C1A2002BDEB4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4B4573E81504C1A2002BDEB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4B4573EB1504C1A2002BDEB4 /* ScreenGrids-Info.plist */ = {isa = PBXFileReference; path = "ScreenGrids-Info.plist"; sourceTree = "<group>"; };
+		4B4573EB1504C1A2002BDEB4 /* ScreenGrids-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScreenGrids-Info.plist"; sourceTree = "<group>"; };
 		4B4573ED1504C1A2002BDEB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B4573EF1504C1A2002BDEB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4B4573F11504C1A2002BDEB4 /* ScreenGrids-Prefix.pch */ = {isa = PBXFileReference; path = "ScreenGrids-Prefix.pch"; sourceTree = "<group>"; };
+		4B4573F11504C1A2002BDEB4 /* ScreenGrids-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScreenGrids-Prefix.pch"; sourceTree = "<group>"; };
 		4B4573F31504C1A2002BDEB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		4B4573F51504C1A2002BDEB4 /* ALAppDelegate.h */ = {isa = PBXFileReference; path = ALAppDelegate.h; sourceTree = "<group>"; };
+		4B4573F51504C1A2002BDEB4 /* ALAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALAppDelegate.h; sourceTree = "<group>"; };
 		4B4573F61504C1A2002BDEB4 /* ALAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALAppDelegate.m; sourceTree = "<group>"; };
 		4B4573F91504C1A3002BDEB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4B4574001504C1A3002BDEB4 /* ScreenGridsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenGridsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4574011504C1A3002BDEB4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		4B4574081504C1A3002BDEB4 /* ScreenGridsTests-Info.plist */ = {isa = PBXFileReference; path = "ScreenGridsTests-Info.plist"; sourceTree = "<group>"; };
+		4B4574081504C1A3002BDEB4 /* ScreenGridsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScreenGridsTests-Info.plist"; sourceTree = "<group>"; };
 		4B45740A1504C1A3002BDEB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4B45740C1504C1A3002BDEB4 /* ScreenGridsTests.h */ = {isa = PBXFileReference; path = ScreenGridsTests.h; sourceTree = "<group>"; };
+		4B45740C1504C1A3002BDEB4 /* ScreenGridsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenGridsTests.h; sourceTree = "<group>"; };
 		4B45740D1504C1A3002BDEB4 /* ScreenGridsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenGridsTests.m; sourceTree = "<group>"; };
+		4B94837B152EA6030051DC12 /* SGMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMenuViewController.h; sourceTree = "<group>"; };
+		4B94837C152EA6030051DC12 /* SGMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMenuViewController.m; sourceTree = "<group>"; };
+		4B94837D152EA6030051DC12 /* SGMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGMenuViewController.xib; sourceTree = "<group>"; };
+		4B948381152EAE5F0051DC12 /* StatusBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusBar.png; path = Resource/StatusBar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +121,11 @@
 		4B4573E91504C1A2002BDEB4 /* ScreenGrids */ = {
 			isa = PBXGroup;
 			children = (
+				4B948377152EA5110051DC12 /* UI */,
 				4B4573F51504C1A2002BDEB4 /* ALAppDelegate.h */,
 				4B4573F61504C1A2002BDEB4 /* ALAppDelegate.m */,
 				4B4573F81504C1A3002BDEB4 /* MainMenu.xib */,
+				4B948380152EAE040051DC12 /* Resource */,
 				4B4573EA1504C1A2002BDEB4 /* Supporting Files */,
 			);
 			path = ScreenGrids;
@@ -129,7 +138,6 @@
 				4B4573EC1504C1A2002BDEB4 /* InfoPlist.strings */,
 				4B4573EF1504C1A2002BDEB4 /* main.m */,
 				4B4573F11504C1A2002BDEB4 /* ScreenGrids-Prefix.pch */,
-				4B4573F21504C1A2002BDEB4 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -151,6 +159,25 @@
 				4B4574091504C1A3002BDEB4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B948377152EA5110051DC12 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4B94837B152EA6030051DC12 /* SGMenuViewController.h */,
+				4B94837C152EA6030051DC12 /* SGMenuViewController.m */,
+				4B94837D152EA6030051DC12 /* SGMenuViewController.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		4B948380152EAE040051DC12 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4B948381152EAE5F0051DC12 /* StatusBar.png */,
+				4B4573F21504C1A2002BDEB4 /* Credits.rtf */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +225,7 @@
 		4B4573D61504C1A2002BDEB4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "FileMaker,Inc";
 			};
 			buildConfigurationList = 4B4573D91504C1A2002BDEB4 /* Build configuration list for PBXProject "ScreenGrids" */;
@@ -227,6 +254,8 @@
 				4B4573EE1504C1A2002BDEB4 /* InfoPlist.strings in Resources */,
 				4B4573F41504C1A2002BDEB4 /* Credits.rtf in Resources */,
 				4B4573FA1504C1A3002BDEB4 /* MainMenu.xib in Resources */,
+				4B94837F152EA6030051DC12 /* SGMenuViewController.xib in Resources */,
+				4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +292,7 @@
 			files = (
 				4B4573F01504C1A2002BDEB4 /* main.m in Sources */,
 				4B4573F71504C1A2002BDEB4 /* ALAppDelegate.m in Sources */,
+				4B94837E152EA6030051DC12 /* SGMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +466,7 @@
 				4B4574131504C1A3002BDEB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B4574141504C1A3002BDEB4 /* Build configuration list for PBXNativeTarget "ScreenGridsTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +475,7 @@
 				4B4574161504C1A3002BDEB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
