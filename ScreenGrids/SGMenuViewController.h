@@ -8,10 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import "DataComputing.h"
+#import "SGPreferencesViewController.h"
 @interface SGMenuViewController : NSViewController
 {
   NSStatusItem *statusItem;
   IBOutlet NSMenu *MainMenu;
+  SGPreferencesViewController *preferencesControl;
 }
 
 - (IBAction) aboutClick:(id)sender;

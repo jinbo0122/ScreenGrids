@@ -46,6 +46,9 @@
   [NSApp terminate:nil];
 }
 - (IBAction)preferencesClick:(id)sender{
-  [DataComputing sizeOfGrids];
+//  [DataComputing sizeOfGrids];
+  preferencesControl = [[SGPreferencesViewController alloc] initWithNibName:@"SGPreferencesViewController" 
+                                                                     bundle:nil];
+  [self.view addSubview:preferencesControl.view];
 }
 @end

@@ -116,11 +116,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">aboutClick</string>
+						<string key="label">aboutClick:</string>
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="681260280"/>
 					</object>
-					<int key="connectionID">27</int>
+					<int key="connectionID">28</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -153,10 +153,10 @@
 						<int key="objectID">3</int>
 						<reference key="object" ref="710893107"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="681260280"/>
 							<reference ref="6714842"/>
 							<reference ref="770566726"/>
 							<reference ref="290179399"/>
+							<reference ref="681260280"/>
 							<reference ref="495921270"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -203,7 +203,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">27</int>
+			<int key="maxID">28</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

@@ -21,6 +21,10 @@
 		4B94837E152EA6030051DC12 /* SGMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B94837C152EA6030051DC12 /* SGMenuViewController.m */; };
 		4B94837F152EA6030051DC12 /* SGMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B94837D152EA6030051DC12 /* SGMenuViewController.xib */; };
 		4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B948381152EAE5F0051DC12 /* StatusBar.png */; };
+		4BE0C6E11535336D00DB84D6 /* SGBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */; };
+		4BE0C6E21535336D00DB84D6 /* SGBackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */; };
+		4BE0C6E7153533A400DB84D6 /* SGPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE0C6E5153533A400DB84D6 /* SGPreferencesViewController.m */; };
+		4BE0C6E8153533A400DB84D6 /* SGPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE0C6E6153533A400DB84D6 /* SGPreferencesViewController.xib */; };
 		4BFAB6681532B441008042BB /* Statusbar_alternate.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFAB6671532B441008042BB /* Statusbar_alternate.png */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +35,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4B4573DE1504C1A2002BDEB4;
 			remoteInfo = ScreenGrids;
+		};
+		4B693C421535D84C003DFB4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B693C391535D84C003DFB4E /* ShortcutRecorder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 939837800DA42965007F53F3;
+			remoteInfo = ShortcutRecorder.framework;
+		};
+		4B693C441535D84C003DFB4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B693C391535D84C003DFB4E /* ShortcutRecorder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 93983B220DA43C4E007F53F3;
+			remoteInfo = ShortcutRecorder_Tester;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -54,12 +72,24 @@
 		4B45740A1504C1A3002BDEB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B45740C1504C1A3002BDEB4 /* ScreenGridsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenGridsTests.h; sourceTree = "<group>"; };
 		4B45740D1504C1A3002BDEB4 /* ScreenGridsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenGridsTests.m; sourceTree = "<group>"; };
+		4B693C391535D84C003DFB4E /* ShortcutRecorder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShortcutRecorder.xcodeproj; path = ShortcutRecorder/ShortcutRecorder.xcodeproj; sourceTree = "<group>"; };
+		4B693C4D1535D896003DFB4E /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRCommon.h; path = ShortcutRecorder/Framework/Source/SRCommon.h; sourceTree = "<group>"; };
+		4B693C4E1535D896003DFB4E /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRKeyCodeTransformer.h; path = ShortcutRecorder/Framework/Source/SRKeyCodeTransformer.h; sourceTree = "<group>"; };
+		4B693C4F1535D896003DFB4E /* SRRecorderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRRecorderCell.h; path = ShortcutRecorder/Framework/Source/SRRecorderCell.h; sourceTree = "<group>"; };
+		4B693C501535D896003DFB4E /* SRRecorderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRRecorderControl.h; path = ShortcutRecorder/Framework/Source/SRRecorderControl.h; sourceTree = "<group>"; };
+		4B693C511535D896003DFB4E /* SRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRValidator.h; path = ShortcutRecorder/Framework/Source/SRValidator.h; sourceTree = "<group>"; };
 		4B72E620153305FB00A8E1B5 /* DataComputing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataComputing.h; sourceTree = "<group>"; };
 		4B72E621153305FB00A8E1B5 /* DataComputing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataComputing.m; sourceTree = "<group>"; };
 		4B94837B152EA6030051DC12 /* SGMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMenuViewController.h; sourceTree = "<group>"; };
 		4B94837C152EA6030051DC12 /* SGMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMenuViewController.m; sourceTree = "<group>"; };
 		4B94837D152EA6030051DC12 /* SGMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGMenuViewController.xib; sourceTree = "<group>"; };
 		4B948381152EAE5F0051DC12 /* StatusBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusBar.png; path = Resource/StatusBar.png; sourceTree = "<group>"; };
+		4BE0C6DE1535336D00DB84D6 /* SGBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBackgroundViewController.h; sourceTree = "<group>"; };
+		4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBackgroundViewController.m; sourceTree = "<group>"; };
+		4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGBackgroundViewController.xib; sourceTree = "<group>"; };
+		4BE0C6E4153533A400DB84D6 /* SGPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPreferencesViewController.h; sourceTree = "<group>"; };
+		4BE0C6E5153533A400DB84D6 /* SGPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPreferencesViewController.m; sourceTree = "<group>"; };
+		4BE0C6E6153533A400DB84D6 /* SGPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPreferencesViewController.xib; sourceTree = "<group>"; };
 		4BFAB6671532B441008042BB /* Statusbar_alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Statusbar_alternate.png; path = Resource/Statusbar_alternate.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +159,7 @@
 				4B4573F51504C1A2002BDEB4 /* ALAppDelegate.h */,
 				4B4573F61504C1A2002BDEB4 /* ALAppDelegate.m */,
 				4B4573F81504C1A3002BDEB4 /* MainMenu.xib */,
+				4B693C381535D808003DFB4E /* Lib */,
 				4B948377152EA5110051DC12 /* UI */,
 				4B72E6241533061200A8E1B5 /* Logic */,
 				4B948380152EAE040051DC12 /* Resource */,
@@ -167,6 +198,44 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4B693C381535D808003DFB4E /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				4B693C461535D858003DFB4E /* ShortcutRecorder */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		4B693C3A1535D84C003DFB4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B693C431535D84C003DFB4E /* ShortcutRecorder.framework */,
+				4B693C451535D84C003DFB4E /* ShortcutRecorder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B693C461535D858003DFB4E /* ShortcutRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				4B693C4B1535D873003DFB4E /* Header */,
+				4B693C391535D84C003DFB4E /* ShortcutRecorder.xcodeproj */,
+			);
+			name = ShortcutRecorder;
+			sourceTree = "<group>";
+		};
+		4B693C4B1535D873003DFB4E /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				4B693C4D1535D896003DFB4E /* SRCommon.h */,
+				4B693C4E1535D896003DFB4E /* SRKeyCodeTransformer.h */,
+				4B693C4F1535D896003DFB4E /* SRRecorderCell.h */,
+				4B693C501535D896003DFB4E /* SRRecorderControl.h */,
+				4B693C511535D896003DFB4E /* SRValidator.h */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
 		4B72E6241533061200A8E1B5 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +251,12 @@
 				4B94837B152EA6030051DC12 /* SGMenuViewController.h */,
 				4B94837C152EA6030051DC12 /* SGMenuViewController.m */,
 				4B94837D152EA6030051DC12 /* SGMenuViewController.xib */,
+				4BE0C6E4153533A400DB84D6 /* SGPreferencesViewController.h */,
+				4BE0C6E5153533A400DB84D6 /* SGPreferencesViewController.m */,
+				4BE0C6E6153533A400DB84D6 /* SGPreferencesViewController.xib */,
+				4BE0C6DE1535336D00DB84D6 /* SGBackgroundViewController.h */,
+				4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */,
+				4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -250,10 +325,31 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
+				el,
+				fr,
+				it,
+				ja,
+				ko,
+				nb,
+				nl,
+				pl,
+				"pt-BR",
+				ro,
+				sk,
+				sv,
+				th,
+				"zh-Hans",
 			);
 			mainGroup = 4B4573D41504C1A2002BDEB4;
 			productRefGroup = 4B4573E01504C1A2002BDEB4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4B693C3A1535D84C003DFB4E /* Products */;
+					ProjectRef = 4B693C391535D84C003DFB4E /* ShortcutRecorder.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4B4573DE1504C1A2002BDEB4 /* ScreenGrids */,
@@ -261,6 +357,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4B693C431535D84C003DFB4E /* ShortcutRecorder.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ShortcutRecorder.framework;
+			remoteRef = 4B693C421535D84C003DFB4E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4B693C451535D84C003DFB4E /* ShortcutRecorder.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ShortcutRecorder.app;
+			remoteRef = 4B693C441535D84C003DFB4E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4B4573DD1504C1A2002BDEB4 /* Resources */ = {
@@ -273,6 +386,8 @@
 				4B94837F152EA6030051DC12 /* SGMenuViewController.xib in Resources */,
 				4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */,
 				4BFAB6681532B441008042BB /* Statusbar_alternate.png in Resources */,
+				4BE0C6E21535336D00DB84D6 /* SGBackgroundViewController.xib in Resources */,
+				4BE0C6E8153533A400DB84D6 /* SGPreferencesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +426,8 @@
 				4B4573F71504C1A2002BDEB4 /* ALAppDelegate.m in Sources */,
 				4B94837E152EA6030051DC12 /* SGMenuViewController.m in Sources */,
 				4B72E622153305FB00A8E1B5 /* DataComputing.m in Sources */,
+				4BE0C6E11535336D00DB84D6 /* SGBackgroundViewController.m in Sources */,
+				4BE0C6E7153533A400DB84D6 /* SGPreferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
