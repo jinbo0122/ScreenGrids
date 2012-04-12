@@ -7,10 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "SGMenuViewController.h"
+//#import "SGMenuViewController.h"
+#import "SGPreferencesWindowController.h"
 @interface ALAppDelegate : NSObject <NSApplicationDelegate>
-{
-  SGMenuViewController *mainVC;
-}
-@property (assign) IBOutlet NSWindow *window;
+
+@property (strong) NSStatusItem *statusItem;
+@property (strong) NSMenu *mainMenu;
+@property (strong) SGPreferencesWindowController *mainWindow;
+
+-     (void) menuInit; 
+
+- (IBAction) aboutClick:(id)sender;
+- (IBAction) preferences:(id)sender;
+- (IBAction) quitApp:(id)sender;
 @end

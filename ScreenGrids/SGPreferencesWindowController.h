@@ -1,17 +1,17 @@
 //
-//  SGPreferencesViewController.h
+//  SGPreferencesWindowController.h
 //  ScreenGrids
 //
-//  Created by Albert Lee on 4/11/12.
+//  Created by Albert Lee on 4/12/12.
 //  Copyright (c) 2012 FileMaker,Inc. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
 #import "SRRecorderControl.h"
-@interface SGPreferencesViewController : NSViewController
-{
-  IBOutlet NSWindow *mainWindow;
+
+@interface SGPreferencesWindowController : NSWindowController
+{  
   IBOutlet SRRecorderControl* shortcutRecorder;
-  
+  IBOutlet NSToolbar *toolBar;
 }
 @end

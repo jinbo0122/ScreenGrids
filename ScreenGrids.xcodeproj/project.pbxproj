@@ -17,14 +17,12 @@
 		4B4574031504C1A3002BDEB4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4573E31504C1A2002BDEB4 /* Cocoa.framework */; };
 		4B45740B1504C1A3002BDEB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B4574091504C1A3002BDEB4 /* InfoPlist.strings */; };
 		4B45740E1504C1A3002BDEB4 /* ScreenGridsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B45740D1504C1A3002BDEB4 /* ScreenGridsTests.m */; };
+		4B67CC201536C9870004DA30 /* SGPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B67CC1E1536C9870004DA30 /* SGPreferencesWindowController.m */; };
+		4B67CC211536C9870004DA30 /* SGPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B67CC1F1536C9870004DA30 /* SGPreferencesWindowController.xib */; };
 		4B72E622153305FB00A8E1B5 /* DataComputing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E621153305FB00A8E1B5 /* DataComputing.m */; };
-		4B94837E152EA6030051DC12 /* SGMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B94837C152EA6030051DC12 /* SGMenuViewController.m */; };
-		4B94837F152EA6030051DC12 /* SGMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B94837D152EA6030051DC12 /* SGMenuViewController.xib */; };
 		4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B948381152EAE5F0051DC12 /* StatusBar.png */; };
 		4BE0C6E11535336D00DB84D6 /* SGBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */; };
 		4BE0C6E21535336D00DB84D6 /* SGBackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */; };
-		4BE0C6E7153533A400DB84D6 /* SGPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE0C6E5153533A400DB84D6 /* SGPreferencesViewController.m */; };
-		4BE0C6E8153533A400DB84D6 /* SGPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE0C6E6153533A400DB84D6 /* SGPreferencesViewController.xib */; };
 		4BFAB6681532B441008042BB /* Statusbar_alternate.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFAB6671532B441008042BB /* Statusbar_alternate.png */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +70,9 @@
 		4B45740A1504C1A3002BDEB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B45740C1504C1A3002BDEB4 /* ScreenGridsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenGridsTests.h; sourceTree = "<group>"; };
 		4B45740D1504C1A3002BDEB4 /* ScreenGridsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenGridsTests.m; sourceTree = "<group>"; };
+		4B67CC1D1536C9870004DA30 /* SGPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPreferencesWindowController.h; sourceTree = "<group>"; };
+		4B67CC1E1536C9870004DA30 /* SGPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPreferencesWindowController.m; sourceTree = "<group>"; };
+		4B67CC1F1536C9870004DA30 /* SGPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPreferencesWindowController.xib; sourceTree = "<group>"; };
 		4B693C391535D84C003DFB4E /* ShortcutRecorder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShortcutRecorder.xcodeproj; path = ShortcutRecorder/ShortcutRecorder.xcodeproj; sourceTree = "<group>"; };
 		4B693C4D1535D896003DFB4E /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRCommon.h; path = ShortcutRecorder/Framework/Source/SRCommon.h; sourceTree = "<group>"; };
 		4B693C4E1535D896003DFB4E /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRKeyCodeTransformer.h; path = ShortcutRecorder/Framework/Source/SRKeyCodeTransformer.h; sourceTree = "<group>"; };
@@ -80,16 +81,10 @@
 		4B693C511535D896003DFB4E /* SRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRValidator.h; path = ShortcutRecorder/Framework/Source/SRValidator.h; sourceTree = "<group>"; };
 		4B72E620153305FB00A8E1B5 /* DataComputing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataComputing.h; sourceTree = "<group>"; };
 		4B72E621153305FB00A8E1B5 /* DataComputing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataComputing.m; sourceTree = "<group>"; };
-		4B94837B152EA6030051DC12 /* SGMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMenuViewController.h; sourceTree = "<group>"; };
-		4B94837C152EA6030051DC12 /* SGMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMenuViewController.m; sourceTree = "<group>"; };
-		4B94837D152EA6030051DC12 /* SGMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGMenuViewController.xib; sourceTree = "<group>"; };
 		4B948381152EAE5F0051DC12 /* StatusBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusBar.png; path = Resource/StatusBar.png; sourceTree = "<group>"; };
 		4BE0C6DE1535336D00DB84D6 /* SGBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBackgroundViewController.h; sourceTree = "<group>"; };
 		4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBackgroundViewController.m; sourceTree = "<group>"; };
 		4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGBackgroundViewController.xib; sourceTree = "<group>"; };
-		4BE0C6E4153533A400DB84D6 /* SGPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPreferencesViewController.h; sourceTree = "<group>"; };
-		4BE0C6E5153533A400DB84D6 /* SGPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPreferencesViewController.m; sourceTree = "<group>"; };
-		4BE0C6E6153533A400DB84D6 /* SGPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPreferencesViewController.xib; sourceTree = "<group>"; };
 		4BFAB6671532B441008042BB /* Statusbar_alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Statusbar_alternate.png; path = Resource/Statusbar_alternate.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,12 +243,9 @@
 		4B948377152EA5110051DC12 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				4B94837B152EA6030051DC12 /* SGMenuViewController.h */,
-				4B94837C152EA6030051DC12 /* SGMenuViewController.m */,
-				4B94837D152EA6030051DC12 /* SGMenuViewController.xib */,
-				4BE0C6E4153533A400DB84D6 /* SGPreferencesViewController.h */,
-				4BE0C6E5153533A400DB84D6 /* SGPreferencesViewController.m */,
-				4BE0C6E6153533A400DB84D6 /* SGPreferencesViewController.xib */,
+				4B67CC1D1536C9870004DA30 /* SGPreferencesWindowController.h */,
+				4B67CC1E1536C9870004DA30 /* SGPreferencesWindowController.m */,
+				4B67CC1F1536C9870004DA30 /* SGPreferencesWindowController.xib */,
 				4BE0C6DE1535336D00DB84D6 /* SGBackgroundViewController.h */,
 				4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */,
 				4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */,
@@ -383,11 +375,10 @@
 				4B4573EE1504C1A2002BDEB4 /* InfoPlist.strings in Resources */,
 				4B4573F41504C1A2002BDEB4 /* Credits.rtf in Resources */,
 				4B4573FA1504C1A3002BDEB4 /* MainMenu.xib in Resources */,
-				4B94837F152EA6030051DC12 /* SGMenuViewController.xib in Resources */,
 				4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */,
 				4BFAB6681532B441008042BB /* Statusbar_alternate.png in Resources */,
 				4BE0C6E21535336D00DB84D6 /* SGBackgroundViewController.xib in Resources */,
-				4BE0C6E8153533A400DB84D6 /* SGPreferencesViewController.xib in Resources */,
+				4B67CC211536C9870004DA30 /* SGPreferencesWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,10 +415,9 @@
 			files = (
 				4B4573F01504C1A2002BDEB4 /* main.m in Sources */,
 				4B4573F71504C1A2002BDEB4 /* ALAppDelegate.m in Sources */,
-				4B94837E152EA6030051DC12 /* SGMenuViewController.m in Sources */,
 				4B72E622153305FB00A8E1B5 /* DataComputing.m in Sources */,
 				4BE0C6E11535336D00DB84D6 /* SGBackgroundViewController.m in Sources */,
-				4BE0C6E7153533A400DB84D6 /* SGPreferencesViewController.m in Sources */,
+				4B67CC201536C9870004DA30 /* SGPreferencesWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
