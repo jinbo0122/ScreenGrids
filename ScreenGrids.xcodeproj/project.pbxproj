@@ -18,6 +18,9 @@
 		4B45740B1504C1A3002BDEB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B4574091504C1A3002BDEB4 /* InfoPlist.strings */; };
 		4B45740E1504C1A3002BDEB4 /* ScreenGridsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B45740D1504C1A3002BDEB4 /* ScreenGridsTests.m */; };
 		4B472F7E15371B0300CF77E5 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B472F7D15371B0300CF77E5 /* DBPrefsWindowController.m */; };
+		4B472F8315371E1F00CF77E5 /* Advanced.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B472F8015371E1F00CF77E5 /* Advanced.png */; };
+		4B472F8415371E1F00CF77E5 /* Appearance.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B472F8115371E1F00CF77E5 /* Appearance.png */; };
+		4B472F8515371E1F00CF77E5 /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B472F8215371E1F00CF77E5 /* General.png */; };
 		4B67CC201536C9870004DA30 /* SGPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B67CC1E1536C9870004DA30 /* SGPreferencesWindowController.m */; };
 		4B67CC211536C9870004DA30 /* SGPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B67CC1F1536C9870004DA30 /* SGPreferencesWindowController.xib */; };
 		4B72E622153305FB00A8E1B5 /* DataComputing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E621153305FB00A8E1B5 /* DataComputing.m */; };
@@ -73,6 +76,9 @@
 		4B45740D1504C1A3002BDEB4 /* ScreenGridsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenGridsTests.m; sourceTree = "<group>"; };
 		4B472F7C15371B0300CF77E5 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPrefsWindowController.h; sourceTree = "<group>"; };
 		4B472F7D15371B0300CF77E5 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPrefsWindowController.m; sourceTree = "<group>"; };
+		4B472F8015371E1F00CF77E5 /* Advanced.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Advanced.png; path = Resource/Advanced.png; sourceTree = "<group>"; };
+		4B472F8115371E1F00CF77E5 /* Appearance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Appearance.png; path = Resource/Appearance.png; sourceTree = "<group>"; };
+		4B472F8215371E1F00CF77E5 /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = General.png; path = Resource/General.png; sourceTree = "<group>"; };
 		4B67CC1D1536C9870004DA30 /* SGPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPreferencesWindowController.h; sourceTree = "<group>"; };
 		4B67CC1E1536C9870004DA30 /* SGPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPreferencesWindowController.m; sourceTree = "<group>"; };
 		4B67CC1F1536C9870004DA30 /* SGPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPreferencesWindowController.xib; sourceTree = "<group>"; };
@@ -271,6 +277,9 @@
 			children = (
 				4B948381152EAE5F0051DC12 /* StatusBar.png */,
 				4BFAB6671532B441008042BB /* Statusbar_alternate.png */,
+				4B472F8015371E1F00CF77E5 /* Advanced.png */,
+				4B472F8115371E1F00CF77E5 /* Appearance.png */,
+				4B472F8215371E1F00CF77E5 /* General.png */,
 				4B4573F21504C1A2002BDEB4 /* Credits.rtf */,
 			);
 			name = Resource;
@@ -392,6 +401,9 @@
 				4BFAB6681532B441008042BB /* Statusbar_alternate.png in Resources */,
 				4BE0C6E21535336D00DB84D6 /* SGBackgroundViewController.xib in Resources */,
 				4B67CC211536C9870004DA30 /* SGPreferencesWindowController.xib in Resources */,
+				4B472F8315371E1F00CF77E5 /* Advanced.png in Resources */,
+				4B472F8415371E1F00CF77E5 /* Appearance.png in Resources */,
+				4B472F8515371E1F00CF77E5 /* General.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

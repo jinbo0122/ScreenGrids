@@ -8,34 +8,31 @@
 
 #import "SGPreferencesWindowController.h"
 
-@interface SGPreferencesWindowController (private)
-- (void)_initToolbar;
+@interface SGPreferencesWindowController ()
 @end
 
-@implementation SGPreferencesWindowController (private)
-- (void)_initToolbar{
-  [[DBPrefsWindowController sharedPrefsWindowController] setupToolbar];
-}
-@end
 
 @implementation SGPreferencesWindowController
-
-- (id)initWithWindow:(NSWindow *)window{
-  self = [super initWithWindow:window];
-  if (self) {
-    // Initialization code here.
-    
-  }
-  
-  return self;
++ (NSString*)nibName{
+  return @"SGPreferencesWindowController";
 }
 
-- (void)windowDidLoad
-{
-  [super windowDidLoad];
-  
-  // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+- (void)setupToolbar{
+  [self addView:generalView
+          label:@"General" 
+          image:[NSImage imageNamed:@"General"]
+     identifier:@"prefGeneralIdentifier"];
+  [self addView:appearanceView
+          label:@"Appearance" 
+          image:[NSImage imageNamed:@"Appearance"]
+     identifier:@"prefAppearanceIdentifier"];
+  [self addView:advancedView
+          label:@"Advanced" 
+          image:[NSImage imageNamed:@"Advanced"]
+     identifier:@"prefAdvancedIdentifier"];
+  [self setShiftSlowsAnimation:YES];
+  [self setCrossFade:YES];
   [self.window setTitle:@"ScreenGrids Preferences"];
-  [self _initToolbar];
 }
+
 @end
