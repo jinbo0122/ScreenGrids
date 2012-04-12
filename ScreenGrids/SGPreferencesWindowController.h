@@ -8,10 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "SRRecorderControl.h"
-
+#import "DBPrefsWindowController.h"
 @interface SGPreferencesWindowController : NSWindowController
 {  
   IBOutlet SRRecorderControl* shortcutRecorder;
-  IBOutlet NSToolbar *toolBar;
 }
 @end

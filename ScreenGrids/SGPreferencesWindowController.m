@@ -8,8 +8,14 @@
 
 #import "SGPreferencesWindowController.h"
 
-@interface SGPreferencesWindowController ()
+@interface SGPreferencesWindowController (private)
+- (void)_initToolbar;
+@end
 
+@implementation SGPreferencesWindowController (private)
+- (void)_initToolbar{
+  [[DBPrefsWindowController sharedPrefsWindowController] setupToolbar];
+}
 @end
 
 @implementation SGPreferencesWindowController
@@ -18,10 +24,7 @@
   self = [super initWithWindow:window];
   if (self) {
     // Initialization code here.
-    [self.window setTitle:@"ScreenGrids Preferences"];
-//    [self.window setStyleMask:NSTitledWindowMask |NSResizableWindowMask |NSMiniaturizableWindowMask |NSClosableWindowMask];
-//    [self.window setBackingType:NSBackingStoreBuffered];
-//    [self.window makeKeyAndOrderFront:self];
+    
   }
   
   return self;
@@ -29,10 +32,10 @@
 
 - (void)windowDidLoad
 {
-    [super windowDidLoad];
-    
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-
-
+  [super windowDidLoad];
+  
+  // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+  [self.window setTitle:@"ScreenGrids Preferences"];
+  [self _initToolbar];
 }
 @end
