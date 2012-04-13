@@ -11,7 +11,7 @@
 #import "DBPrefsWindowController.h"
 @interface SGPreferencesWindowController : DBPrefsWindowController
 {  
-  IBOutlet SRRecorderControl* shortcutRecorder;
+//  SRRecorderControl* shortcutRecorder;
   DBPrefsWindowController *preferenceControl;
   IBOutlet NSView *generalView;
   IBOutlet NSView *appearanceView;

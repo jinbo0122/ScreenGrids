@@ -58,6 +58,7 @@
 }
 
 - (IBAction)preferences:(id)sender{
+  [NSApp activateIgnoringOtherApps:YES];
   [self.mainWindow showWindow:nil];
 }
 

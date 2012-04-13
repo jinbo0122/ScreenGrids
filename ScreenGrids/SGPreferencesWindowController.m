@@ -18,6 +18,9 @@
 }
 
 - (void)setupToolbar{
+//  shortcutRecorder = [[SRRecorderControl alloc] initWithFrame:NSMakeRect(50, 30, 100, 20)];
+  
+  
   [self addView:generalView
           label:@"General" 
           image:[NSImage imageNamed:@"General"]
@@ -33,6 +36,8 @@
   [self setShiftSlowsAnimation:YES];
   [self setCrossFade:YES];
   [self.window setTitle:@"ScreenGrids Preferences"];
+  
+
 }
 
 @end
