@@ -7,13 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
-//#import "SGMenuViewController.h"
+#import "JFHotkeyManager.h"
 #import "SGPreferencesWindowController.h"
+//#import "PTHotKey.h"
 @interface ALAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (strong) NSStatusItem *statusItem;
 @property (strong) NSMenu *mainMenu;
 @property (strong) SGPreferencesWindowController *mainWindow;
+@property (strong) JFHotkeyManager *hotkeyManager;
+//@property (strong) PTHotKey *hotKey;
 
 -     (void) menuInit; 
 

@@ -27,6 +27,8 @@
 		4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B948381152EAE5F0051DC12 /* StatusBar.png */; };
 		4BE0C6E11535336D00DB84D6 /* SGBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */; };
 		4BE0C6E21535336D00DB84D6 /* SGBackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */; };
+		4BEF5444153B28BF0065CB50 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEF5443153B28BF0065CB50 /* Carbon.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		4BEF5451153B30680065CB50 /* JFHotkeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEF5450153B30680065CB50 /* JFHotkeyManager.m */; };
 		4BFAB6681532B441008042BB /* Statusbar_alternate.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFAB6671532B441008042BB /* Statusbar_alternate.png */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +96,9 @@
 		4BE0C6DE1535336D00DB84D6 /* SGBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBackgroundViewController.h; sourceTree = "<group>"; };
 		4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBackgroundViewController.m; sourceTree = "<group>"; };
 		4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGBackgroundViewController.xib; sourceTree = "<group>"; };
+		4BEF5443153B28BF0065CB50 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		4BEF544F153B30680065CB50 /* JFHotkeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFHotkeyManager.h; sourceTree = "<group>"; };
+		4BEF5450153B30680065CB50 /* JFHotkeyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFHotkeyManager.m; sourceTree = "<group>"; };
 		4BFAB6671532B441008042BB /* Statusbar_alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Statusbar_alternate.png; path = Resource/Statusbar_alternate.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BEF5444153B28BF0065CB50 /* Carbon.framework in Frameworks */,
 				4B4573E41504C1A2002BDEB4 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +146,7 @@
 		4B4573E21504C1A2002BDEB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BEF5443153B28BF0065CB50 /* Carbon.framework */,
 				4B4573E31504C1A2002BDEB4 /* Cocoa.framework */,
 				4B4574011504C1A3002BDEB4 /* SenTestingKit.framework */,
 				4B4573E51504C1A2002BDEB4 /* Other Frameworks */,
@@ -207,6 +214,8 @@
 			children = (
 				4B472F7C15371B0300CF77E5 /* DBPrefsWindowController.h */,
 				4B472F7D15371B0300CF77E5 /* DBPrefsWindowController.m */,
+				4BEF544F153B30680065CB50 /* JFHotkeyManager.h */,
+				4BEF5450153B30680065CB50 /* JFHotkeyManager.m */,
 			);
 			name = Toolbar;
 			sourceTree = "<group>";
@@ -444,6 +453,7 @@
 				4BE0C6E11535336D00DB84D6 /* SGBackgroundViewController.m in Sources */,
 				4B67CC201536C9870004DA30 /* SGPreferencesWindowController.m in Sources */,
 				4B472F7E15371B0300CF77E5 /* DBPrefsWindowController.m in Sources */,
+				4BEF5451153B30680065CB50 /* JFHotkeyManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

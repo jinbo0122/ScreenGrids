@@ -17,10 +17,7 @@
   return @"SGPreferencesWindowController";
 }
 
-- (void)setupToolbar{
-//  shortcutRecorder = [[SRRecorderControl alloc] initWithFrame:NSMakeRect(50, 30, 100, 20)];
-  
-  
+- (void)setupToolbar{  
   [self addView:generalView
           label:@"General" 
           image:[NSImage imageNamed:@"General"]
@@ -39,5 +36,6 @@
   
 
 }
+
 
 @end

@@ -7,11 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "SRRecorderControl.h"
 #import "DBPrefsWindowController.h"
 @interface SGPreferencesWindowController : DBPrefsWindowController
 {  
-//  SRRecorderControl* shortcutRecorder;
   DBPrefsWindowController *preferenceControl;
   IBOutlet NSView *generalView;
   IBOutlet NSView *appearanceView;
