@@ -18,6 +18,7 @@
 @property (strong) PTHotKey *hotKey;
 
 -     (void) menuInit; 
+-     (void) hotkeyInit;
 
 - (IBAction) aboutClick:(id)sender;
 - (IBAction) preferences:(id)sender;

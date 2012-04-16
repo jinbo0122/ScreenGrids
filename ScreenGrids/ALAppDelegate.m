@@ -16,19 +16,12 @@
 {
   // Insert code here to initialize your application
   [self menuInit];
-   
-  PTKeyCombo *keyCombo = [[PTKeyCombo alloc] initWithKeyCode:0x7E modifiers:controlKey + cmdKey];
-  self.hotKey = [[PTHotKey alloc] initWithIdentifier:self keyCombo:keyCombo];
-  [self.hotKey setTarget: self];
-	[self.hotKey setAction: @selector(activateScreenGrids)];
-	
-	[[PTHotKeyCenter sharedCenter] registerHotKey: self.hotKey];
-  
+  [self hotkeyInit]; 
+    
   self.mainWindow = [[SGPreferencesWindowController alloc] initWithWindowNibName:@"SGPreferencesWindowController"];
-  
-
 }
-
+#pragma mark -
+#pragma mark Initialize
 - (void) menuInit{
   if(statusItem){
     [[NSStatusBar systemStatusBar] removeStatusItem:statusItem];
@@ -58,9 +51,23 @@
   [statusItem setMenu:mainMenu];
 }
 
+- (void) hotkeyInit{
+  PTKeyCombo *keyCombo = [[PTKeyCombo alloc] initWithKeyCode:0x01 modifiers:controlKey + cmdKey];  //ctrl+command+s
+  self.hotKey = [[PTHotKey alloc] initWithIdentifier:self keyCombo:keyCombo];
+  [self.hotKey setTarget: self];
+	[self.hotKey setAction: @selector(activateScreenGrids)];
+	
+	[[PTHotKeyCenter sharedCenter] registerHotKey: self.hotKey];
+}
+#pragma mark -
+#pragma mark Render ScreenGrids
+
 - (void)activateScreenGrids{
   NSLog(@"keypressed");
 }
+
+#pragma mark -
+#pragma mark Menu Clik Implement
 
 - (IBAction)aboutClick:(id)sender{
   [NSApp activateIgnoringOtherApps:YES];
