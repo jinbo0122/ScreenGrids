@@ -7,26 +7,22 @@
 //
 
 #import "ALAppDelegate.h"
-//#import "PTHotKeyCenter.h"
+
 @implementation ALAppDelegate
 
-@synthesize mainWindow,statusItem,mainMenu,hotkeyManager;//,hotKey;
+@synthesize mainWindow,statusItem,mainMenu,hotKey;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
   // Insert code here to initialize your application
   [self menuInit];
-  
-  self.hotkeyManager = [[JFHotkeyManager alloc] init];
-  [self.hotkeyManager bindKeyRef:49 withModifiers:cmdKey + optionKey + shiftKey target:self action:@selector(activateScreenGrids)];
-  [self.hotkeyManager bind:@"ctrl command shift up" target:self action:@selector(activateScreenGrids)];
-  
-//  PTKeyCombo *keyCombo = [[PTKeyCombo alloc] initWithKeyCode:0 modifiers:4096];
-//  self.hotKey = [[PTHotKey alloc] initWithIdentifier:self keyCombo:keyCombo];
-//  [self.hotKey setTarget: self];
-//	[self.hotKey setAction: @selector(activateScreenGrids)];
-//	
-//	[[PTHotKeyCenter sharedCenter] registerHotKey: self.hotKey];
+   
+  PTKeyCombo *keyCombo = [[PTKeyCombo alloc] initWithKeyCode:0x7E modifiers:controlKey + cmdKey];
+  self.hotKey = [[PTHotKey alloc] initWithIdentifier:self keyCombo:keyCombo];
+  [self.hotKey setTarget: self];
+	[self.hotKey setAction: @selector(activateScreenGrids)];
+	
+	[[PTHotKeyCenter sharedCenter] registerHotKey: self.hotKey];
   
   self.mainWindow = [[SGPreferencesWindowController alloc] initWithWindowNibName:@"SGPreferencesWindowController"];
   

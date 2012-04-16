@@ -24,11 +24,14 @@
 		4B67CC201536C9870004DA30 /* SGPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B67CC1E1536C9870004DA30 /* SGPreferencesWindowController.m */; };
 		4B67CC211536C9870004DA30 /* SGPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B67CC1F1536C9870004DA30 /* SGPreferencesWindowController.xib */; };
 		4B72E622153305FB00A8E1B5 /* DataComputing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E621153305FB00A8E1B5 /* DataComputing.m */; };
+		4B8A9F0B153BCFF200187E0D /* PTHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F04153BCFF200187E0D /* PTHotKey.m */; };
+		4B8A9F0C153BCFF200187E0D /* PTHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F06153BCFF200187E0D /* PTHotKeyCenter.m */; };
+		4B8A9F0D153BCFF200187E0D /* PTKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F08153BCFF200187E0D /* PTKeyCodeTranslator.m */; };
+		4B8A9F0E153BCFF200187E0D /* PTKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F0A153BCFF200187E0D /* PTKeyCombo.m */; };
 		4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B948381152EAE5F0051DC12 /* StatusBar.png */; };
 		4BE0C6E11535336D00DB84D6 /* SGBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */; };
 		4BE0C6E21535336D00DB84D6 /* SGBackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */; };
 		4BEF5444153B28BF0065CB50 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEF5443153B28BF0065CB50 /* Carbon.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		4BEF5451153B30680065CB50 /* JFHotkeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEF5450153B30680065CB50 /* JFHotkeyManager.m */; };
 		4BFAB6681532B441008042BB /* Statusbar_alternate.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFAB6671532B441008042BB /* Statusbar_alternate.png */; };
 /* End PBXBuildFile section */
 
@@ -39,20 +42,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4B4573DE1504C1A2002BDEB4;
 			remoteInfo = ScreenGrids;
-		};
-		4B693C421535D84C003DFB4E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4B693C391535D84C003DFB4E /* ShortcutRecorder.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 939837800DA42965007F53F3;
-			remoteInfo = ShortcutRecorder.framework;
-		};
-		4B693C441535D84C003DFB4E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4B693C391535D84C003DFB4E /* ShortcutRecorder.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 93983B220DA43C4E007F53F3;
-			remoteInfo = ShortcutRecorder_Tester;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -84,21 +73,21 @@
 		4B67CC1D1536C9870004DA30 /* SGPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPreferencesWindowController.h; sourceTree = "<group>"; };
 		4B67CC1E1536C9870004DA30 /* SGPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPreferencesWindowController.m; sourceTree = "<group>"; };
 		4B67CC1F1536C9870004DA30 /* SGPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPreferencesWindowController.xib; sourceTree = "<group>"; };
-		4B693C391535D84C003DFB4E /* ShortcutRecorder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShortcutRecorder.xcodeproj; path = ShortcutRecorder/ShortcutRecorder.xcodeproj; sourceTree = "<group>"; };
-		4B693C4D1535D896003DFB4E /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRCommon.h; path = ShortcutRecorder/Framework/Source/SRCommon.h; sourceTree = "<group>"; };
-		4B693C4E1535D896003DFB4E /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRKeyCodeTransformer.h; path = ShortcutRecorder/Framework/Source/SRKeyCodeTransformer.h; sourceTree = "<group>"; };
-		4B693C4F1535D896003DFB4E /* SRRecorderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRRecorderCell.h; path = ShortcutRecorder/Framework/Source/SRRecorderCell.h; sourceTree = "<group>"; };
-		4B693C501535D896003DFB4E /* SRRecorderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRRecorderControl.h; path = ShortcutRecorder/Framework/Source/SRRecorderControl.h; sourceTree = "<group>"; };
-		4B693C511535D896003DFB4E /* SRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRValidator.h; path = ShortcutRecorder/Framework/Source/SRValidator.h; sourceTree = "<group>"; };
 		4B72E620153305FB00A8E1B5 /* DataComputing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataComputing.h; sourceTree = "<group>"; };
 		4B72E621153305FB00A8E1B5 /* DataComputing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataComputing.m; sourceTree = "<group>"; };
+		4B8A9F03153BCFF200187E0D /* PTHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHotKey.h; sourceTree = "<group>"; };
+		4B8A9F04153BCFF200187E0D /* PTHotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTHotKey.m; sourceTree = "<group>"; };
+		4B8A9F05153BCFF200187E0D /* PTHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHotKeyCenter.h; sourceTree = "<group>"; };
+		4B8A9F06153BCFF200187E0D /* PTHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTHotKeyCenter.m; sourceTree = "<group>"; };
+		4B8A9F07153BCFF200187E0D /* PTKeyCodeTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTKeyCodeTranslator.h; sourceTree = "<group>"; };
+		4B8A9F08153BCFF200187E0D /* PTKeyCodeTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTKeyCodeTranslator.m; sourceTree = "<group>"; };
+		4B8A9F09153BCFF200187E0D /* PTKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTKeyCombo.h; sourceTree = "<group>"; };
+		4B8A9F0A153BCFF200187E0D /* PTKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTKeyCombo.m; sourceTree = "<group>"; };
 		4B948381152EAE5F0051DC12 /* StatusBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusBar.png; path = Resource/StatusBar.png; sourceTree = "<group>"; };
 		4BE0C6DE1535336D00DB84D6 /* SGBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBackgroundViewController.h; sourceTree = "<group>"; };
 		4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBackgroundViewController.m; sourceTree = "<group>"; };
 		4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGBackgroundViewController.xib; sourceTree = "<group>"; };
 		4BEF5443153B28BF0065CB50 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		4BEF544F153B30680065CB50 /* JFHotkeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFHotkeyManager.h; sourceTree = "<group>"; };
-		4BEF5450153B30680065CB50 /* JFHotkeyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFHotkeyManager.m; sourceTree = "<group>"; };
 		4BFAB6671532B441008042BB /* Statusbar_alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Statusbar_alternate.png; path = Resource/Statusbar_alternate.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,8 +203,6 @@
 			children = (
 				4B472F7C15371B0300CF77E5 /* DBPrefsWindowController.h */,
 				4B472F7D15371B0300CF77E5 /* DBPrefsWindowController.m */,
-				4BEF544F153B30680065CB50 /* JFHotkeyManager.h */,
-				4BEF5450153B30680065CB50 /* JFHotkeyManager.m */,
 			);
 			name = Toolbar;
 			sourceTree = "<group>";
@@ -223,40 +210,10 @@
 		4B693C381535D808003DFB4E /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				4B8A9F02153BCFF200187E0D /* HotKey */,
 				4B472F7F15371B0800CF77E5 /* Toolbar */,
-				4B693C461535D858003DFB4E /* ShortcutRecorder */,
 			);
 			name = Lib;
-			sourceTree = "<group>";
-		};
-		4B693C3A1535D84C003DFB4E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4B693C431535D84C003DFB4E /* ShortcutRecorder.framework */,
-				4B693C451535D84C003DFB4E /* ShortcutRecorder.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4B693C461535D858003DFB4E /* ShortcutRecorder */ = {
-			isa = PBXGroup;
-			children = (
-				4B693C4B1535D873003DFB4E /* Header */,
-				4B693C391535D84C003DFB4E /* ShortcutRecorder.xcodeproj */,
-			);
-			name = ShortcutRecorder;
-			sourceTree = "<group>";
-		};
-		4B693C4B1535D873003DFB4E /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				4B693C4D1535D896003DFB4E /* SRCommon.h */,
-				4B693C4E1535D896003DFB4E /* SRKeyCodeTransformer.h */,
-				4B693C4F1535D896003DFB4E /* SRRecorderCell.h */,
-				4B693C501535D896003DFB4E /* SRRecorderControl.h */,
-				4B693C511535D896003DFB4E /* SRValidator.h */,
-			);
-			name = Header;
 			sourceTree = "<group>";
 		};
 		4B72E6241533061200A8E1B5 /* Logic */ = {
@@ -266,6 +223,21 @@
 				4B72E621153305FB00A8E1B5 /* DataComputing.m */,
 			);
 			name = Logic;
+			sourceTree = "<group>";
+		};
+		4B8A9F02153BCFF200187E0D /* HotKey */ = {
+			isa = PBXGroup;
+			children = (
+				4B8A9F03153BCFF200187E0D /* PTHotKey.h */,
+				4B8A9F04153BCFF200187E0D /* PTHotKey.m */,
+				4B8A9F05153BCFF200187E0D /* PTHotKeyCenter.h */,
+				4B8A9F06153BCFF200187E0D /* PTHotKeyCenter.m */,
+				4B8A9F07153BCFF200187E0D /* PTKeyCodeTranslator.h */,
+				4B8A9F08153BCFF200187E0D /* PTKeyCodeTranslator.m */,
+				4B8A9F09153BCFF200187E0D /* PTKeyCombo.h */,
+				4B8A9F0A153BCFF200187E0D /* PTKeyCombo.m */,
+			);
+			path = HotKey;
 			sourceTree = "<group>";
 		};
 		4B948377152EA5110051DC12 /* UI */ = {
@@ -367,12 +339,6 @@
 			mainGroup = 4B4573D41504C1A2002BDEB4;
 			productRefGroup = 4B4573E01504C1A2002BDEB4 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4B693C3A1535D84C003DFB4E /* Products */;
-					ProjectRef = 4B693C391535D84C003DFB4E /* ShortcutRecorder.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				4B4573DE1504C1A2002BDEB4 /* ScreenGrids */,
@@ -380,23 +346,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4B693C431535D84C003DFB4E /* ShortcutRecorder.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ShortcutRecorder.framework;
-			remoteRef = 4B693C421535D84C003DFB4E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4B693C451535D84C003DFB4E /* ShortcutRecorder.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ShortcutRecorder.app;
-			remoteRef = 4B693C441535D84C003DFB4E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4B4573DD1504C1A2002BDEB4 /* Resources */ = {
@@ -453,7 +402,10 @@
 				4BE0C6E11535336D00DB84D6 /* SGBackgroundViewController.m in Sources */,
 				4B67CC201536C9870004DA30 /* SGPreferencesWindowController.m in Sources */,
 				4B472F7E15371B0300CF77E5 /* DBPrefsWindowController.m in Sources */,
-				4BEF5451153B30680065CB50 /* JFHotkeyManager.m in Sources */,
+				4B8A9F0B153BCFF200187E0D /* PTHotKey.m in Sources */,
+				4B8A9F0C153BCFF200187E0D /* PTHotKeyCenter.m in Sources */,
+				4B8A9F0D153BCFF200187E0D /* PTKeyCodeTranslator.m in Sources */,
+				4B8A9F0E153BCFF200187E0D /* PTKeyCombo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
