@@ -28,6 +28,8 @@
 		4B8A9F0C153BCFF200187E0D /* PTHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F06153BCFF200187E0D /* PTHotKeyCenter.m */; };
 		4B8A9F0D153BCFF200187E0D /* PTKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F08153BCFF200187E0D /* PTKeyCodeTranslator.m */; };
 		4B8A9F0E153BCFF200187E0D /* PTKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F0A153BCFF200187E0D /* PTKeyCombo.m */; };
+		4B8A9F17153BD4A300187E0D /* SGBackgroundAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F15153BD4A300187E0D /* SGBackgroundAppearance.m */; };
+		4B8A9F18153BD4A300187E0D /* SGBackgroundAppearance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B8A9F16153BD4A300187E0D /* SGBackgroundAppearance.xib */; };
 		4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B948381152EAE5F0051DC12 /* StatusBar.png */; };
 		4BE0C6E11535336D00DB84D6 /* SGBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */; };
 		4BE0C6E21535336D00DB84D6 /* SGBackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */; };
@@ -83,6 +85,9 @@
 		4B8A9F08153BCFF200187E0D /* PTKeyCodeTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTKeyCodeTranslator.m; sourceTree = "<group>"; };
 		4B8A9F09153BCFF200187E0D /* PTKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTKeyCombo.h; sourceTree = "<group>"; };
 		4B8A9F0A153BCFF200187E0D /* PTKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTKeyCombo.m; sourceTree = "<group>"; };
+		4B8A9F14153BD4A300187E0D /* SGBackgroundAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBackgroundAppearance.h; sourceTree = "<group>"; };
+		4B8A9F15153BD4A300187E0D /* SGBackgroundAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBackgroundAppearance.m; sourceTree = "<group>"; };
+		4B8A9F16153BD4A300187E0D /* SGBackgroundAppearance.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGBackgroundAppearance.xib; sourceTree = "<group>"; };
 		4B948381152EAE5F0051DC12 /* StatusBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusBar.png; path = Resource/StatusBar.png; sourceTree = "<group>"; };
 		4BE0C6DE1535336D00DB84D6 /* SGBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBackgroundViewController.h; sourceTree = "<group>"; };
 		4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBackgroundViewController.m; sourceTree = "<group>"; };
@@ -249,6 +254,9 @@
 				4BE0C6DE1535336D00DB84D6 /* SGBackgroundViewController.h */,
 				4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */,
 				4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */,
+				4B8A9F14153BD4A300187E0D /* SGBackgroundAppearance.h */,
+				4B8A9F15153BD4A300187E0D /* SGBackgroundAppearance.m */,
+				4B8A9F16153BD4A300187E0D /* SGBackgroundAppearance.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -362,6 +370,7 @@
 				4B472F8315371E1F00CF77E5 /* Advanced.png in Resources */,
 				4B472F8415371E1F00CF77E5 /* Appearance.png in Resources */,
 				4B472F8515371E1F00CF77E5 /* General.png in Resources */,
+				4B8A9F18153BD4A300187E0D /* SGBackgroundAppearance.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +415,7 @@
 				4B8A9F0C153BCFF200187E0D /* PTHotKeyCenter.m in Sources */,
 				4B8A9F0D153BCFF200187E0D /* PTKeyCodeTranslator.m in Sources */,
 				4B8A9F0E153BCFF200187E0D /* PTKeyCombo.m in Sources */,
+				4B8A9F17153BD4A300187E0D /* SGBackgroundAppearance.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +523,11 @@
 		4B4574121504C1A3002BDEB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/ScreenGrids\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScreenGrids/ScreenGrids-Prefix.pch";
 				INFOPLIST_FILE = "ScreenGrids/ScreenGrids-Info.plist";
@@ -524,6 +539,11 @@
 		4B4574131504C1A3002BDEB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/ScreenGrids\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScreenGrids/ScreenGrids-Prefix.pch";
 				INFOPLIST_FILE = "ScreenGrids/ScreenGrids-Info.plist";

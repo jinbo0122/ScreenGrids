@@ -178,6 +178,7 @@ static PTHotKeyCenter *_sharedHotKeyCenter = nil;
 
 - (void)_hotKeyUp: (PTHotKey*)hotKey
 {
+  [hotKey releaseKey];
 }
 
 - (void)sendEvent: (NSEvent*)event

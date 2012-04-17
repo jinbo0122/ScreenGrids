@@ -92,6 +92,13 @@
 	return mAction;
 }
 
+- (void)setReleaseAction: (SEL)action{
+  mReleaseAction = action;
+}
+- (SEL)releaseAction{
+  return mReleaseAction;
+}
+
 - (NSUInteger)carbonHotKeyID
 {
 	return mCarbonHotKeyID;
@@ -117,6 +124,10 @@
 - (void)invoke
 {
 	[mTarget performSelector: mAction withObject: self];
+}
+
+- (void)releaseKey{
+  [mTarget performSelector: mReleaseAction withObject:self];
 }
 
 @end

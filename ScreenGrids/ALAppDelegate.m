@@ -56,6 +56,7 @@
   self.hotKey = [[PTHotKey alloc] initWithIdentifier:self keyCombo:keyCombo];
   [self.hotKey setTarget: self];
 	[self.hotKey setAction: @selector(activateScreenGrids)];
+  [self.hotKey setReleaseAction:@selector(deactivateScreenGrids)];
 	
 	[[PTHotKeyCenter sharedCenter] registerHotKey: self.hotKey];
 }
@@ -64,8 +65,22 @@
 
 - (void)activateScreenGrids{
   NSLog(@"keypressed");
+//  NSAppleScript* playPause = [[NSAppleScript alloc] initWithSource:
+//                              @"tell application \"Safari\"\n"
+//                              @"if it is running then\n"
+//                              @"return URL of front document as string\n"
+//                              //@"set bounds of window 1 to {(2560 / 3), 0, 2560, 1440}"
+//                              @"end if\n"
+//                              @"end tell"];
+// NSString *str =  [[playPause executeAndReturnError:nil] stringValue];
+//  NSLog(@"%@",str);
+  
+  
+ 
 }
-
+- (void)deactivateScreenGrids{
+  NSLog(@"%@",[[NSApp accessibilityAttributeNames] description]); 
+}
 #pragma mark -
 #pragma mark Menu Clik Implement
 

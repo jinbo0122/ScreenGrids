@@ -19,6 +19,7 @@
 	PTKeyCombo*		mKeyCombo;
 	id				mTarget;
 	SEL				mAction;
+  SEL       mReleaseAction;
 
 	NSUInteger		mCarbonHotKeyID;
 	EventHotKeyRef	mCarbonEventHotKeyRef;
@@ -40,6 +41,8 @@
 - (id)target;
 - (void)setAction: (SEL)action;
 - (SEL)action;
+- (void)setReleaseAction: (SEL)action;
+- (SEL)releaseAction;
 
 - (NSUInteger)carbonHotKeyID;
 - (void)setCarbonHotKeyID: (NSUInteger)hotKeyID;
@@ -48,5 +51,5 @@
 - (void)setCarbonEventHotKeyRef:(EventHotKeyRef)hotKeyRef;
 
 - (void)invoke;
-
+- (void)releaseKey;
 @end
