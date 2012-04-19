@@ -24,6 +24,8 @@
 		4B67CC201536C9870004DA30 /* SGPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B67CC1E1536C9870004DA30 /* SGPreferencesWindowController.m */; };
 		4B67CC211536C9870004DA30 /* SGPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B67CC1F1536C9870004DA30 /* SGPreferencesWindowController.xib */; };
 		4B72E622153305FB00A8E1B5 /* DataComputing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B72E621153305FB00A8E1B5 /* DataComputing.m */; };
+		4B73ADA9153D528900954BB0 /* SGBackgroundWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B73ADA7153D528900954BB0 /* SGBackgroundWindowController.m */; };
+		4B73ADAA153D528900954BB0 /* SGBackgroundWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B73ADA8153D528900954BB0 /* SGBackgroundWindowController.xib */; };
 		4B8A9F0B153BCFF200187E0D /* PTHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F04153BCFF200187E0D /* PTHotKey.m */; };
 		4B8A9F0C153BCFF200187E0D /* PTHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F06153BCFF200187E0D /* PTHotKeyCenter.m */; };
 		4B8A9F0D153BCFF200187E0D /* PTKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F08153BCFF200187E0D /* PTKeyCodeTranslator.m */; };
@@ -31,8 +33,6 @@
 		4B8A9F17153BD4A300187E0D /* SGBackgroundAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F15153BD4A300187E0D /* SGBackgroundAppearance.m */; };
 		4B8A9F18153BD4A300187E0D /* SGBackgroundAppearance.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B8A9F16153BD4A300187E0D /* SGBackgroundAppearance.xib */; };
 		4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B948381152EAE5F0051DC12 /* StatusBar.png */; };
-		4BE0C6E11535336D00DB84D6 /* SGBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */; };
-		4BE0C6E21535336D00DB84D6 /* SGBackgroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */; };
 		4BEF5444153B28BF0065CB50 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEF5443153B28BF0065CB50 /* Carbon.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		4BFAB6681532B441008042BB /* Statusbar_alternate.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFAB6671532B441008042BB /* Statusbar_alternate.png */; };
 /* End PBXBuildFile section */
@@ -77,6 +77,9 @@
 		4B67CC1F1536C9870004DA30 /* SGPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPreferencesWindowController.xib; sourceTree = "<group>"; };
 		4B72E620153305FB00A8E1B5 /* DataComputing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataComputing.h; sourceTree = "<group>"; };
 		4B72E621153305FB00A8E1B5 /* DataComputing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataComputing.m; sourceTree = "<group>"; };
+		4B73ADA6153D528900954BB0 /* SGBackgroundWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBackgroundWindowController.h; sourceTree = "<group>"; };
+		4B73ADA7153D528900954BB0 /* SGBackgroundWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBackgroundWindowController.m; sourceTree = "<group>"; };
+		4B73ADA8153D528900954BB0 /* SGBackgroundWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGBackgroundWindowController.xib; sourceTree = "<group>"; };
 		4B8A9F03153BCFF200187E0D /* PTHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHotKey.h; sourceTree = "<group>"; };
 		4B8A9F04153BCFF200187E0D /* PTHotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTHotKey.m; sourceTree = "<group>"; };
 		4B8A9F05153BCFF200187E0D /* PTHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHotKeyCenter.h; sourceTree = "<group>"; };
@@ -89,9 +92,6 @@
 		4B8A9F15153BD4A300187E0D /* SGBackgroundAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBackgroundAppearance.m; sourceTree = "<group>"; };
 		4B8A9F16153BD4A300187E0D /* SGBackgroundAppearance.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGBackgroundAppearance.xib; sourceTree = "<group>"; };
 		4B948381152EAE5F0051DC12 /* StatusBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusBar.png; path = Resource/StatusBar.png; sourceTree = "<group>"; };
-		4BE0C6DE1535336D00DB84D6 /* SGBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBackgroundViewController.h; sourceTree = "<group>"; };
-		4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBackgroundViewController.m; sourceTree = "<group>"; };
-		4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGBackgroundViewController.xib; sourceTree = "<group>"; };
 		4BEF5443153B28BF0065CB50 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		4BFAB6671532B441008042BB /* Statusbar_alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Statusbar_alternate.png; path = Resource/Statusbar_alternate.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -251,9 +251,9 @@
 				4B67CC1D1536C9870004DA30 /* SGPreferencesWindowController.h */,
 				4B67CC1E1536C9870004DA30 /* SGPreferencesWindowController.m */,
 				4B67CC1F1536C9870004DA30 /* SGPreferencesWindowController.xib */,
-				4BE0C6DE1535336D00DB84D6 /* SGBackgroundViewController.h */,
-				4BE0C6DF1535336D00DB84D6 /* SGBackgroundViewController.m */,
-				4BE0C6E01535336D00DB84D6 /* SGBackgroundViewController.xib */,
+				4B73ADA6153D528900954BB0 /* SGBackgroundWindowController.h */,
+				4B73ADA7153D528900954BB0 /* SGBackgroundWindowController.m */,
+				4B73ADA8153D528900954BB0 /* SGBackgroundWindowController.xib */,
 				4B8A9F14153BD4A300187E0D /* SGBackgroundAppearance.h */,
 				4B8A9F15153BD4A300187E0D /* SGBackgroundAppearance.m */,
 				4B8A9F16153BD4A300187E0D /* SGBackgroundAppearance.xib */,
@@ -365,12 +365,12 @@
 				4B4573FA1504C1A3002BDEB4 /* MainMenu.xib in Resources */,
 				4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */,
 				4BFAB6681532B441008042BB /* Statusbar_alternate.png in Resources */,
-				4BE0C6E21535336D00DB84D6 /* SGBackgroundViewController.xib in Resources */,
 				4B67CC211536C9870004DA30 /* SGPreferencesWindowController.xib in Resources */,
 				4B472F8315371E1F00CF77E5 /* Advanced.png in Resources */,
 				4B472F8415371E1F00CF77E5 /* Appearance.png in Resources */,
 				4B472F8515371E1F00CF77E5 /* General.png in Resources */,
 				4B8A9F18153BD4A300187E0D /* SGBackgroundAppearance.xib in Resources */,
+				4B73ADAA153D528900954BB0 /* SGBackgroundWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +408,6 @@
 				4B4573F01504C1A2002BDEB4 /* main.m in Sources */,
 				4B4573F71504C1A2002BDEB4 /* ALAppDelegate.m in Sources */,
 				4B72E622153305FB00A8E1B5 /* DataComputing.m in Sources */,
-				4BE0C6E11535336D00DB84D6 /* SGBackgroundViewController.m in Sources */,
 				4B67CC201536C9870004DA30 /* SGPreferencesWindowController.m in Sources */,
 				4B472F7E15371B0300CF77E5 /* DBPrefsWindowController.m in Sources */,
 				4B8A9F0B153BCFF200187E0D /* PTHotKey.m in Sources */,
@@ -416,6 +415,7 @@
 				4B8A9F0D153BCFF200187E0D /* PTKeyCodeTranslator.m in Sources */,
 				4B8A9F0E153BCFF200187E0D /* PTKeyCombo.m in Sources */,
 				4B8A9F17153BD4A300187E0D /* SGBackgroundAppearance.m in Sources */,
+				4B73ADA9153D528900954BB0 /* SGBackgroundWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

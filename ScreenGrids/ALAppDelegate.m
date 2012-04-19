@@ -10,7 +10,7 @@
 
 @implementation ALAppDelegate
 
-@synthesize mainWindow,statusItem,mainMenu,hotKey;
+@synthesize mainWindow,statusItem,mainMenu,hotKey,backgroundWindow;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -19,6 +19,7 @@
   [self hotkeyInit]; 
     
   self.mainWindow = [[SGPreferencesWindowController alloc] initWithWindowNibName:@"SGPreferencesWindowController"];
+  self.backgroundWindow = [[SGBackgroundWindowController alloc] initWithWindowNibName:@"SGBackgroundWindowController"];
 }
 #pragma mark -
 #pragma mark Initialize
@@ -52,7 +53,7 @@
 }
 
 - (void) hotkeyInit{
-  PTKeyCombo *keyCombo = [[PTKeyCombo alloc] initWithKeyCode:0x01 modifiers:controlKey + cmdKey];  //ctrl+command+s
+  PTKeyCombo *keyCombo = [[PTKeyCombo alloc] initWithKeyCode:0x01 modifiers:shiftKey + cmdKey];  //ctrl+command+s
   self.hotKey = [[PTHotKey alloc] initWithIdentifier:self keyCombo:keyCombo];
   [self.hotKey setTarget: self];
 	[self.hotKey setAction: @selector(activateScreenGrids)];
@@ -60,11 +61,25 @@
 	
 	[[PTHotKeyCenter sharedCenter] registerHotKey: self.hotKey];
 }
+
+- (void) gridWindowInit{
+  //Grid Window Initialize 
+  
+  NSRect rectOfBGWindow = [[[DataComputing sizeOfGrids] objectAtIndex:0] rectValue];  
+  
+  
+  [self.backgroundWindow.window setBackgroundColor:[NSColor colorWithCalibratedRed:0 green:1 blue:0 alpha:0.3f]]; 
+  [self.backgroundWindow.window setAlphaValue:0.3f];
+  [self.backgroundWindow.window setFrame:rectOfBGWindow display:YES animate:NO];
+  [self.backgroundWindow.window setIgnoresMouseEvents:YES];
+  [self.backgroundWindow showWindow:nil];
+}
+
 #pragma mark -
 #pragma mark Render ScreenGrids
 
 - (void)activateScreenGrids{
-  NSLog(@"keypressed");
+
 //  NSAppleScript* playPause = [[NSAppleScript alloc] initWithSource:
 //                              @"tell application \"Safari\"\n"
 //                              @"if it is running then\n"
@@ -74,12 +89,25 @@
 //                              @"end tell"];
 // NSString *str =  [[playPause executeAndReturnError:nil] stringValue];
 //  NSLog(@"%@",str);
+  [NSApp activateIgnoringOtherApps:YES];
   
+  NSLog(@"%f",self.backgroundWindow.window.frame.origin.x);
+  NSLog(@"%f",self.backgroundWindow.window.frame.origin.y);
+  NSLog(@"%f",self.backgroundWindow.window.frame.size.width);
+  NSLog(@"%f",self.backgroundWindow.window.frame.size.height);
   
- 
+  NSSize size = [[self.backgroundWindow.window dockTile] size];
+  
+  NSLog(@"%f",size.width);
+  NSLog(@"%f",size.height);
+  [self gridWindowInit];
+
 }
 - (void)deactivateScreenGrids{
-  NSLog(@"%@",[[NSApp accessibilityAttributeNames] description]); 
+//  NSLog(@"%@",[[NSApp accessibilityAttributeNames] description]);
+  [NSApp activateIgnoringOtherApps:YES];
+  [self.backgroundWindow close];
+  
 }
 #pragma mark -
 #pragma mark Menu Clik Implement

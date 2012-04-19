@@ -8,17 +8,21 @@
 
 #import <Cocoa/Cocoa.h>
 #import "SGPreferencesWindowController.h"
+#import "SGBackgroundWindowController.h"
 #import "PTHotKey.h"
 #import "PTHotKeyCenter.h"
+#import "DataComputing.h"
 @interface ALAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (strong) NSStatusItem *statusItem;
 @property (strong) NSMenu *mainMenu;
 @property (strong) SGPreferencesWindowController *mainWindow;
+@property (strong) SGBackgroundWindowController *backgroundWindow;
 @property (strong) PTHotKey *hotKey;
 
 -     (void) menuInit; 
 -     (void) hotkeyInit;
+-     (void) gridWindowInit;
 
 - (IBAction) aboutClick:(id)sender;
 - (IBAction) preferences:(id)sender;
