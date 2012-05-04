@@ -28,12 +28,12 @@
     CGFloat  width = mainFrame.size.width
                    - ([orientation isEqualToString:@"bottom"]?0:maxDockSize);
     CGFloat      x = [orientation isEqualToString:@"left"]?maxDockSize:0;
-    CGFloat      y = TOP_BAR_HEIGHT;
+    CGFloat      y = [orientation isEqualToString:@"bottom"]?maxDockSize:0;//TOP_BAR_HEIGHT;
     rect = CGRectMake(x, y, width, height);
   }
   else {
     rect = CGRectMake(0, 
-                      TOP_BAR_HEIGHT, 
+                      0, 
                       mainFrame.size.width, 
                       mainFrame.size.height-TOP_BAR_HEIGHT);
   }

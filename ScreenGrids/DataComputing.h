@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#define TOP_BAR_HEIGHT 55
+#define TOP_BAR_HEIGHT 20
 @interface DataComputing : NSObject
 + (NSArray*) sizeOfGrids;
 @end
