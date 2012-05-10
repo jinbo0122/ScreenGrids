@@ -34,10 +34,20 @@
   [mainMenu addItemWithTitle:@"About ScreenGrids" 
                       action:@selector(aboutClick:) 
                keyEquivalent:@""];
+
   [mainMenu addItem:[NSMenuItem separatorItem]];
   [mainMenu addItemWithTitle:@"Preferences" 
                       action:@selector(preferences:) 
                keyEquivalent:@""];
+  
+  [mainMenu addItem:[NSMenuItem separatorItem]];
+  [mainMenu addItemWithTitle:@"Developer's Website" 
+                      action:@selector(devWebsite:) 
+               keyEquivalent:@""];
+  [mainMenu addItemWithTitle:@"Report a Bug" 
+                      action:@selector(reportBug:) 
+               keyEquivalent:@""];
+  
   [mainMenu addItem:[NSMenuItem separatorItem]];
   [mainMenu addItemWithTitle:@"Quit" 
                       action:@selector(quitApp:) 
@@ -115,6 +125,28 @@
 - (IBAction)aboutClick:(id)sender{
   [NSApp activateIgnoringOtherApps:YES];
   [NSApp orderFrontStandardAboutPanel:nil];
+}
+
+- (IBAction) devWebsite:(id)sender{
+//  [NSApp openURL:[NSURL URLWithString:@"http://weibo.com/leexd22/profile?leftnav=1&wvr=3.6"]];
+  [[NSWorkspace sharedWorkspace] openURL:
+   [NSURL URLWithString:@"http://weibo.com/leexd22/profile?leftnav=1&wvr=3.6"]];
+}
+
+- (IBAction)reportBug:(id)sender{
+  NSString *emailString = [NSString stringWithString:@"\
+                           tell application \"Mail\"\n activate\n\
+                           set newMessage to make new outgoing message with properties {subject:\"Report a bug on ScreenGrids\", content:\"\" & return} \n\
+                           tell newMessage\n\
+                           set visible to true\n\
+                           make new to recipient at end of to recipients with properties {name:\"Alber Lee Studio\", address:\"albert_leee@me.com\"}\n\
+                           end tell\n end tell"];
+  
+  
+  
+  NSLog(@"%@",emailString);
+  NSAppleScript *emailScript = [[NSAppleScript alloc] initWithSource:emailString];
+  [emailScript executeAndReturnError:nil];
 }
 
 - (IBAction)preferences:(id)sender{

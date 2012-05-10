@@ -24,7 +24,9 @@
 -     (void) hotkeyInit;
 -     (void) gridWindowInit;
 
-- (IBAction) aboutClick:(id)sender;
+- (IBAction)  aboutClick:(id)sender;
+- (IBAction)  devWebsite:(id)sender;
+- (IBAction)   reportBug:(id)sender;
 - (IBAction) preferences:(id)sender;
-- (IBAction) quitApp:(id)sender;
+- (IBAction)     quitApp:(id)sender;
 @end
