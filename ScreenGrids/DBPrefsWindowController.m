@@ -299,6 +299,9 @@ static DBPrefsWindowController *_sharedPrefsWindowController = nil;
 
 - (void)toggleActivePreferenceView:(NSToolbarItem *)toolbarItem
 {
+  if ([NSColorPanel sharedColorPanelExists]) {
+    [[NSColorPanel sharedColorPanel] close];
+  }
     NSString *identifier = [toolbarItem itemIdentifier];
     [[NSUserDefaults standardUserDefaults] setObject:identifier forKey:[[toolbarItem toolbar] identifier]];
 	[self displayViewForIdentifier:identifier animate:YES];
