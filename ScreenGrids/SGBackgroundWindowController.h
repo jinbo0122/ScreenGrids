@@ -7,7 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "SGBackgroundAppearance.h"
+//#import "SGBackgroundAppearance.h"
 @interface SGBackgroundWindowController : NSWindowController
-@property (nonatomic, strong,readwrite) SGBackgroundAppearance *appearance;
+{
+  NSColor *_frameColor;
+  NSColor *_bgColor;
+  
+  NSInteger *_frameStyle;
+  NSImageView *_bgImage;
+}
+
+//@property (nonatomic, strong,readwrite) SGBackgroundAppearance *appearance;
+@property(nonatomic,strong)NSImageView *bgImage;
 @end

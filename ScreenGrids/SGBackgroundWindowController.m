@@ -13,7 +13,7 @@
 @end
 
 @implementation SGBackgroundWindowController
-@synthesize appearance;
+@synthesize bgImage = _bgImage;
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
@@ -29,6 +29,10 @@
     [super windowDidLoad];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+//  self.bgImage = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, 1920, 1020)];
+//  self.bgImage.image = [NSImage imageNamed:@"tempBG.jpg"];
+//  self.bgImage.imageScaling = NSScaleToFit ;
+//  [self.window.contentView addSubview:self.bgImage];
 }
 
 @end
