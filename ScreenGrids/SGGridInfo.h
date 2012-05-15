@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "DataComputing.h"
 @interface SGGridInfo : NSObject
 
+@property(nonatomic,assign)NSInteger iGridNum;
+@property(nonatomic,strong)NSArray *gridArray;
+
+- (BOOL)checkGridConsistency;
+- (NSInteger)mouseInGridNum:(NSPoint)point;
 @end

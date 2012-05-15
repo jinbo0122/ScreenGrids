@@ -96,7 +96,7 @@
   
   [gridArrangementStyleComboBox selectItemAtIndex:iArrangementOption];
   
-  NSImageView *customArrangementImageView = [[NSImageView alloc] initWithFrame:NSMakeRect(28, 95, 343, 212)];
+  customArrangementImageView = [[NSImageView alloc] initWithFrame:NSMakeRect(28, 95, 343, 212)];
   customArrangementImageView.image = [NSImage imageNamed:@"customArrangement.png"];
   customArrangementImageView.imageScaling = NSScaleToFit;
   
@@ -104,7 +104,7 @@
   
   
   templateImageView = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, 240, 150)];
-  [themeTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:iTemplateNum]byExtendingSelection:YES];
+  [themeTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:iTemplateNum] byExtendingSelection:YES];
   [themeTableView scrollRowToVisible:iTemplateNum];
   templateImageView.image = [NSImage imageNamed:[NSString stringWithFormat:@"template_%d",iTemplateNum]];
   templateImageView.imageScaling = NSScaleToFit;

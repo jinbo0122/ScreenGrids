@@ -31,6 +31,7 @@
   IBOutlet NSTableView *themeTableView;
   IBOutlet NSView *themeStandardView;
   NSImageView *templateImageView;
+  NSImageView *customArrangementImageView; 
   
   IBOutlet NSView *customArrangementView;
   IBOutlet NSComboBox *verticalNumComboBox;
@@ -56,7 +57,6 @@
   NSInteger iTemplateNum;
   SGGridInfo *gridInfo;
   
-  BOOL bSolidColorChoose;
 }
 
 - (void)dictionaryInit;
