@@ -46,26 +46,49 @@
   [self arrangementTabInit];
 }
 
-#define kSGBackgroundOption  @"ScreenGridBackgroundOption"
-#define kSGBckgroundColor    @"ScreenGridBackgroundColor"
-#define kSGCustomImage       @"ScreenGridCustomImage"
-#define kSGFrameOption       @"ScreenGridFramOption"
-#define kSGFrameColor        @"ScreenGridFrameColor"
-#define kSGArrangementOption @"ScreenGridArrangementOption"
-#define kSGTemplateNum       @"ScreenGridTemplateNum"
-#define kSGGridInfo          @"ScreenGridInfo"
+#define kSGBackgroundOption    @"ScreenGridBackgroundOption"
+#define kSGBckgroundColor      @"ScreenGridBackgroundColor"
+#define kSGCustomImage         @"ScreenGridCustomImage"
+#define kSGFrameOption         @"ScreenGridFramOption"
+#define kSGFrameColor          @"ScreenGridFrameColor"
+#define kSGArrangementOption   @"ScreenGridArrangementOption"
+#define kSGTemplateNum         @"ScreenGridTemplateNum"
+#define kSGGridInfo            @"ScreenGridInfo"
+
+#define kSGVerticalNum         @"ScreenGridVerticalNum"
+#define kSGVerticalFirstPer    @"ScreenGridVerticalFirstPer"
+#define kSGVerticalSecondPer   @"ScreenGridVerticalSecondPer"
+#define kSGHorizontalNum       @"ScreenGridHorizontalNum"
+#define kSGHorizontalFirstPer  @"ScreenGridHorizontalFirstPer"
+#define kSGHorizontalSecondPer @"ScreenGridHorizontalSecondPer"
+
+#define kSGVerticalFirstPerSelection    @"ScreenGridVerticalFirstPerSelection"
+#define kSGVerticalSecondPerSelection   @"ScreenGridVerticalSecondPerSelection"
+#define kSGHorizontalFirstPerSelection  @"ScreenGridHorizontalFirstPerSelection"
+#define kSGHorizontalSecondPerSelection @"ScreenGridHorizontalSecondPerSelection"
 
 - (void)dictionaryInit{
 //  [NSUserDefaults resetStandardUserDefaults];
   userDefaults          = [NSUserDefaults standardUserDefaults];
   iBackgroundOption     = [userDefaults integerForKey:kSGBackgroundOption];
-  solidButtonColorData  = [userDefaults  dataForKey:kSGBckgroundColor];
+  solidButtonColorData  = [userDefaults    dataForKey:kSGBckgroundColor];
   customBgImageData     = [userDefaults    dataForKey:kSGCustomImage];
   iFrameOption          = [userDefaults integerForKey:kSGFrameOption];
-  frameButtonColorData  = [userDefaults  dataForKey:kSGFrameColor];
+  frameButtonColorData  = [userDefaults    dataForKey:kSGFrameColor];
   iArrangementOption    = [userDefaults integerForKey:kSGArrangementOption];
   iTemplateNum          = [userDefaults integerForKey:kSGTemplateNum];
   gridInfo              = [userDefaults  objectForKey:kSGGridInfo];
+  
+  iVerNum               = [userDefaults integerForKey:kSGVerticalNum];
+  iVerFirstSelection    = [userDefaults integerForKey:kSGVerticalFirstPerSelection];
+  iVerSecondSelection   = [userDefaults integerForKey:kSGVerticalSecondPerSelection];
+  fVerFir               = [userDefaults   floatForKey:kSGVerticalFirstPer];
+  fVerSec               = [userDefaults   floatForKey:kSGVerticalSecondPer];
+  iHorNum               = [userDefaults integerForKey:kSGHorizontalNum];
+  iHorFirstSelection    = [userDefaults integerForKey:kSGHorizontalFirstPerSelection];
+  iHorSecondSelection   = [userDefaults integerForKey:kSGHorizontalSecondPerSelection];
+  fHorFir               = [userDefaults   floatForKey:kSGHorizontalFirstPer];
+  fHorSec               = [userDefaults   floatForKey:kSGHorizontalSecondPer];
   
   if (solidButtonColorData!=nil) {
     solidButtonColor = [NSKeyedUnarchiver unarchiveObjectWithData:solidButtonColorData];
@@ -79,14 +102,26 @@
   solidButtonColorData = [NSKeyedArchiver archivedDataWithRootObject:solidButtonColor];
   frameButtonColorData = [NSKeyedArchiver archivedDataWithRootObject:frameButtonColor];
   
-  [userDefaults setInteger:iBackgroundOption forKey:kSGBackgroundOption];
-  [userDefaults setObject:solidButtonColorData forKey:kSGBckgroundColor];
-  [userDefaults setObject:customBgImageData forKey:kSGCustomImage];
-  [userDefaults setInteger:iFrameOption forKey:kSGFrameOption];
-  [userDefaults setObject:frameButtonColorData forKey:kSGFrameColor];
-  [userDefaults setInteger:iArrangementOption forKey:kSGArrangementOption];
-  [userDefaults setInteger:iTemplateNum forKey:kSGTemplateNum];
-  [userDefaults setObject:gridInfo forKey:kSGGridInfo];
+  [userDefaults setInteger:iBackgroundOption    forKey:kSGBackgroundOption];
+  [userDefaults  setObject:solidButtonColorData forKey:kSGBckgroundColor];
+  [userDefaults  setObject:customBgImageData    forKey:kSGCustomImage];
+  [userDefaults setInteger:iFrameOption         forKey:kSGFrameOption];
+  [userDefaults  setObject:frameButtonColorData forKey:kSGFrameColor];
+  [userDefaults setInteger:iArrangementOption   forKey:kSGArrangementOption];
+  [userDefaults setInteger:iTemplateNum         forKey:kSGTemplateNum];
+  [userDefaults  setObject:gridInfo             forKey:kSGGridInfo];
+  
+  [userDefaults setInteger:iVerNum             forKey:kSGVerticalNum];
+  [userDefaults setInteger:iVerFirstSelection  forKey:kSGVerticalFirstPerSelection];
+  [userDefaults setInteger:iVerSecondSelection forKey:kSGVerticalSecondPerSelection];
+  [userDefaults   setFloat:fVerFir             forKey:kSGVerticalFirstPer];
+  [userDefaults   setFloat:fVerSec             forKey:kSGVerticalSecondPer];
+  [userDefaults setInteger:iHorNum             forKey:kSGHorizontalNum];
+  [userDefaults setInteger:iHorFirstSelection  forKey:kSGHorizontalFirstPerSelection];
+  [userDefaults setInteger:iHorSecondSelection forKey:kSGHorizontalSecondPerSelection];
+  [userDefaults   setFloat:fHorFir             forKey:kSGHorizontalFirstPer];
+  [userDefaults   setFloat:fHorSec             forKey:kSGHorizontalSecondPer];
+
 
   [userDefaults synchronize];
 }
@@ -99,6 +134,13 @@
   customArrangementImageView = [[NSImageView alloc] initWithFrame:NSMakeRect(28, 95, 343, 212)];
   customArrangementImageView.image = [NSImage imageNamed:@"customArrangement.png"];
   customArrangementImageView.imageScaling = NSScaleToFit;
+  
+  [verticalNumComboBox        selectItemAtIndex:iVerNum];
+  [horizontalNumComboBox      selectItemAtIndex:iHorNum];
+  [verticalProportionFirst    selectItemAtIndex:iVerFirstSelection];
+  [verticalProportionSecond   selectItemAtIndex:iVerSecondSelection]; 
+  [horizontalProportionFirst  selectItemAtIndex:iHorFirstSelection];
+  [horizontalProportionSecond selectItemAtIndex:iHorSecondSelection];
   
   [customArrangementView addSubview:customArrangementImageView];
   
@@ -186,6 +228,83 @@
   }
   else if (comboBox == gridArrangementStyleComboBox) {
     iArrangementOption = [gridArrangementStyleComboBox indexOfSelectedItem];
+  }
+  
+  else if(comboBox == verticalNumComboBox){
+    iVerNum = [verticalNumComboBox indexOfSelectedItem];
+    switch (iVerNum) {
+      case 0:
+        [verticalProportionFirst  setEnabled:NO];
+        [verticalProportionSecond setEnabled:NO];
+        
+        fVerFir = 0;
+        fVerSec = 0;
+        
+        break;
+      case 1:
+        [verticalProportionFirst  setEnabled:YES];
+        [verticalProportionSecond setEnabled:NO];
+        
+        fVerFir = [[verticalProportionFirst objectValueOfSelectedItem] floatValue];
+        fVerSec = 0;
+        break;
+      case 2:
+        [verticalProportionFirst  setEnabled:YES];
+        [verticalProportionSecond setEnabled:YES];
+        
+        fVerFir = [[verticalProportionFirst objectValueOfSelectedItem] floatValue];
+        fVerSec = [[verticalProportionSecond objectValueOfSelectedItem] floatValue];
+        break;
+      default:
+        break;
+    }
+  }
+  
+  else if(comboBox == horizontalNumComboBox){
+    iHorNum = [horizontalNumComboBox indexOfSelectedItem];
+    switch (iHorNum) {
+      case 0:
+        [horizontalProportionFirst  setEnabled:NO];
+        [horizontalProportionSecond setEnabled:NO];
+        
+        fHorFir = 0;
+        fHorSec = 0;
+        
+        break;
+      case 1:
+        [horizontalProportionFirst  setEnabled:YES];
+        [horizontalProportionSecond setEnabled:NO];
+        
+        fHorFir = [[horizontalProportionFirst objectValueOfSelectedItem] floatValue];
+        fHorSec = 0;
+        break;
+      case 2:
+        [horizontalProportionFirst  setEnabled:YES];
+        [horizontalProportionSecond setEnabled:YES];
+        
+        fHorFir = [[horizontalProportionFirst objectValueOfSelectedItem] floatValue];
+        fHorSec = [[horizontalProportionSecond objectValueOfSelectedItem] floatValue];
+        break;
+      default:
+        break;
+    }
+  }
+  
+  else if (comboBox == verticalProportionFirst) {
+    iVerFirstSelection = [verticalProportionFirst indexOfSelectedItem];
+    fVerFir = [[verticalProportionFirst objectValueOfSelectedItem] floatValue];
+  }
+  else if (comboBox == verticalProportionSecond) {
+    iVerSecondSelection = [verticalProportionSecond indexOfSelectedItem];
+    fVerSec = [[verticalProportionSecond objectValueOfSelectedItem] floatValue];
+  }
+  else if (comboBox == horizontalProportionFirst) {
+    iHorFirstSelection = [horizontalProportionFirst indexOfSelectedItem];
+    fHorFir = [[horizontalProportionFirst objectValueOfSelectedItem] floatValue];
+  }
+  else if (comboBox == horizontalProportionSecond) {
+    iHorSecondSelection = [horizontalProportionSecond indexOfSelectedItem];
+    fHorSec = [[horizontalProportionSecond objectValueOfSelectedItem] floatValue];
   }
   
   [self syncUserSettings];

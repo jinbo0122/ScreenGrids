@@ -106,32 +106,36 @@
 }
 
 + (NSArray*) arrayCustomGridByVerticalNum:(NSInteger)verNum 
-                            withVerFirPer:(NSInteger)verFirPer 
-                            withVerSecPer:(NSInteger)verSecPer 
+                            withVerFirPer:(CGFloat)verFirPer 
+                            withVerSecPer:(CGFloat)verSecPer 
                         withHorizontalNum:(NSInteger)horNum 
-                            withHorFirPer:(NSInteger)horFirPer 
-                            withHorSecPer:(NSInteger)horSecPer{
+                            withHorFirPer:(CGFloat)horFirPer 
+                            withHorSecPer:(CGFloat)horSecPer{
 //serial vertical point  
   
   NSMutableArray *arrayVer = [NSMutableArray arrayWithObject:[NSNumber numberWithInteger:0]];
   if(verFirPer!=0)
     [arrayVer addObject:[NSNumber numberWithFloat:verFirPer]];
-  if (verSecPer<verFirPer && verSecPer>0) {
-    [arrayVer addObject:[NSNumber numberWithFloat:verSecPer]];
-  }
-  else if (verSecPer > verFirPer) {
-    [arrayVer insertObject:[NSNumber numberWithFloat:verSecPer] atIndex:1];
+  if (verFirPer!=verSecPer) {
+    if (verSecPer<verFirPer && verSecPer>0) {
+      [arrayVer addObject:[NSNumber numberWithFloat:verSecPer]];
+    }
+    else if (verSecPer > verFirPer) {
+      [arrayVer insertObject:[NSNumber numberWithFloat:verSecPer] atIndex:1];
+    }
   }
   [arrayVer addObject:[NSNumber numberWithFloat:1]];
 //serial horizontal point  
   NSMutableArray *arrayHor = [NSMutableArray arrayWithObject:[NSNumber numberWithInteger:0]];
   if(horFirPer!=0)
     [arrayHor addObject:[NSNumber numberWithFloat:horFirPer]];
-  if (horSecPer<horFirPer && horSecPer>0) {
-    [arrayHor addObject:[NSNumber numberWithFloat:horSecPer]];
-  }
-  else if (horSecPer > horFirPer) {
-    [arrayHor insertObject:[NSNumber numberWithFloat:horSecPer] atIndex:1];
+  if (horFirPer!=horSecPer) {
+    if (horSecPer<horFirPer && horSecPer>0) {
+      [arrayHor addObject:[NSNumber numberWithFloat:horSecPer]];
+    }
+    else if (horSecPer > horFirPer) {
+      [arrayHor insertObject:[NSNumber numberWithFloat:horSecPer] atIndex:1];
+    }
   }
   [arrayHor addObject:[NSNumber numberWithFloat:1]];
 //construct grid array  

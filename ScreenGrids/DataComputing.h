@@ -13,9 +13,9 @@
 
 + (NSArray*) arrayTemplateByNum:(NSInteger)integer;
 + (NSArray*) arrayCustomGridByVerticalNum:(NSInteger)verNum 
-                            withVerFirPer:(NSInteger)verFirPer 
-                            withVerSecPer:(NSInteger)verSecPer 
+                            withVerFirPer:(CGFloat)verFirPer 
+                            withVerSecPer:(CGFloat)verSecPer 
                         withHorizontalNum:(NSInteger)horNum 
-                            withHorFirPer:(NSInteger)horFirPer 
-                            withHorSecPer:(NSInteger)horSecPer;
+                            withHorFirPer:(CGFloat)horFirPer 
+                            withHorSecPer:(CGFloat)horSecPer;
 @end

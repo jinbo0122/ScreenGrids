@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B06ED6B1562B07C002DB58A /* SGCustomGridImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B06ED6A1562B07C002DB58A /* SGCustomGridImageView.m */; };
 		4B4573E41504C1A2002BDEB4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4573E31504C1A2002BDEB4 /* Cocoa.framework */; };
 		4B4573EE1504C1A2002BDEB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B4573EC1504C1A2002BDEB4 /* InfoPlist.strings */; };
 		4B4573F01504C1A2002BDEB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4573EF1504C1A2002BDEB4 /* main.m */; };
@@ -63,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B06ED691562B07C002DB58A /* SGCustomGridImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGCustomGridImageView.h; sourceTree = "<group>"; };
+		4B06ED6A1562B07C002DB58A /* SGCustomGridImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGCustomGridImageView.m; sourceTree = "<group>"; };
 		4B4573DF1504C1A2002BDEB4 /* ScreenGrids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenGrids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4573E31504C1A2002BDEB4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4B4573E61504C1A2002BDEB4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -276,6 +279,10 @@
 		4B72E6241533061200A8E1B5 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				4B4B1DA5156147E700108B45 /* SGGridInfo.h */,
+				4B4B1DA6156147E700108B45 /* SGGridInfo.m */,
+				4B06ED691562B07C002DB58A /* SGCustomGridImageView.h */,
+				4B06ED6A1562B07C002DB58A /* SGCustomGridImageView.m */,
 				4B72E620153305FB00A8E1B5 /* DataComputing.h */,
 				4B72E621153305FB00A8E1B5 /* DataComputing.m */,
 			);
@@ -303,8 +310,6 @@
 				4B67CC1D1536C9870004DA30 /* SGPreferencesWindowController.h */,
 				4B67CC1E1536C9870004DA30 /* SGPreferencesWindowController.m */,
 				4B67CC1F1536C9870004DA30 /* SGPreferencesWindowController.xib */,
-				4B4B1DA5156147E700108B45 /* SGGridInfo.h */,
-				4B4B1DA6156147E700108B45 /* SGGridInfo.m */,
 				4B73ADA6153D528900954BB0 /* SGBackgroundWindowController.h */,
 				4B73ADA7153D528900954BB0 /* SGBackgroundWindowController.m */,
 				4B73ADA8153D528900954BB0 /* SGBackgroundWindowController.xib */,
@@ -485,6 +490,7 @@
 				4B8A9F0E153BCFF200187E0D /* PTKeyCombo.m in Sources */,
 				4B73ADA9153D528900954BB0 /* SGBackgroundWindowController.m in Sources */,
 				4B4B1DA7156147E700108B45 /* SGGridInfo.m in Sources */,
+				4B06ED6B1562B07C002DB58A /* SGCustomGridImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

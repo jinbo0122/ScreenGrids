@@ -29,11 +29,11 @@
   IBOutlet NSButton *frameColorButton;
   
   IBOutlet NSTableView *themeTableView;
-  IBOutlet NSView *themeStandardView;
-  NSImageView *templateImageView;
-  NSImageView *customArrangementImageView; 
+  IBOutlet NSView      *themeStandardView;
+           NSImageView *templateImageView;
+           NSImageView *customArrangementImageView; 
   
-  IBOutlet NSView *customArrangementView;
+  IBOutlet NSView     *customArrangementView;
   IBOutlet NSComboBox *verticalNumComboBox;
   IBOutlet NSComboBox *verticalProportionFirst;
   IBOutlet NSComboBox *verticalProportionSecond;
@@ -46,15 +46,27 @@
   
   
   NSUserDefaults *userDefaults;
-  NSInteger iBackgroundOption;
-  NSColor *solidButtonColor;
-  NSData *solidButtonColorData;
-  NSData *customBgImageData;
-  NSInteger iFrameOption;
-  NSColor *frameButtonColor;
-  NSData *frameButtonColorData;
-  NSInteger iArrangementOption;
-  NSInteger iTemplateNum;
+  NSInteger      iBackgroundOption;
+  NSColor        *solidButtonColor;
+  NSData         *solidButtonColorData;
+  NSData         *customBgImageData;
+  NSInteger      iFrameOption;
+  NSColor        *frameButtonColor;
+  NSData         *frameButtonColorData;
+  NSInteger      iArrangementOption;
+  NSInteger      iTemplateNum;
+  
+  NSInteger iVerNum;
+  NSInteger iVerFirstSelection;
+  NSInteger iVerSecondSelection;
+  CGFloat   fVerFir;
+  CGFloat   fVerSec;
+  NSInteger iHorNum;
+  NSInteger iHorFirstSelection;
+  NSInteger iHorSecondSelection;
+  CGFloat   fHorFir;
+  CGFloat   fHorSec;
+  
   SGGridInfo *gridInfo;
   
 }
