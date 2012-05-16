@@ -46,26 +46,7 @@
   [self arrangementTabInit];
 }
 
-#define kSGBackgroundOption    @"ScreenGridBackgroundOption"
-#define kSGBckgroundColor      @"ScreenGridBackgroundColor"
-#define kSGCustomImage         @"ScreenGridCustomImage"
-#define kSGFrameOption         @"ScreenGridFramOption"
-#define kSGFrameColor          @"ScreenGridFrameColor"
-#define kSGArrangementOption   @"ScreenGridArrangementOption"
-#define kSGTemplateNum         @"ScreenGridTemplateNum"
-#define kSGGridInfo            @"ScreenGridInfo"
 
-#define kSGVerticalNum         @"ScreenGridVerticalNum"
-#define kSGVerticalFirstPer    @"ScreenGridVerticalFirstPer"
-#define kSGVerticalSecondPer   @"ScreenGridVerticalSecondPer"
-#define kSGHorizontalNum       @"ScreenGridHorizontalNum"
-#define kSGHorizontalFirstPer  @"ScreenGridHorizontalFirstPer"
-#define kSGHorizontalSecondPer @"ScreenGridHorizontalSecondPer"
-
-#define kSGVerticalFirstPerSelection    @"ScreenGridVerticalFirstPerSelection"
-#define kSGVerticalSecondPerSelection   @"ScreenGridVerticalSecondPerSelection"
-#define kSGHorizontalFirstPerSelection  @"ScreenGridHorizontalFirstPerSelection"
-#define kSGHorizontalSecondPerSelection @"ScreenGridHorizontalSecondPerSelection"
 
 - (void)dictionaryInit{
 //  [NSUserDefaults resetStandardUserDefaults];

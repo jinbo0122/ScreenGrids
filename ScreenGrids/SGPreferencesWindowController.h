@@ -10,6 +10,7 @@
 #import "DBPrefsWindowController.h"
 #import "SGGridInfo.h"
 #import "SGCustomGridImageView.h"
+#import "ScreenGrids-Prefix.pch"
 #define DEFAULT_TEMPLATE_NUM 6
 @interface SGPreferencesWindowController : DBPrefsWindowController<NSTableViewDataSource,NSTableViewDelegate,NSTabViewDelegate,NSComboBoxDelegate>
 {  

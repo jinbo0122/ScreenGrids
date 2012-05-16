@@ -104,14 +104,65 @@
   
   return array;
 }
++ (NSArray*) arrayTemplateGridPoints:(NSInteger)integer withRect:(NSRect)rect{
+  NSMutableArray *array = [NSMutableArray array];
+  CGFloat width = rect.size.width;
+  CGFloat height = rect.size.height;
+  
+  switch (integer) {
+    case 0:
+      [array addObject:[NSValue valueWithRect:NSMakeRect(        0,0.5*height,    width,0.5*height)]];
+      [array addObject:[NSValue valueWithRect:NSMakeRect(0.5*width,         0,0.5*width,    height)]];
+      break;
+    case 1:
+      [array addObject:[NSValue valueWithRect:NSMakeRect(         0,0.34*height,0.34*width,0.34*height)]];
+      [array addObject:[NSValue valueWithRect:NSMakeRect(         0,0.67*height,0.34*width,0.67*height)]];
+      [array addObject:[NSValue valueWithRect:NSMakeRect(0.34*width, 0.5*height,     width, 0.5*height)]];      
+      [array addObject:[NSValue valueWithRect:NSMakeRect(0.34*width,          0,0.34*width,     height)]];
+      break;
+    case 2:
+      [array addObject:[NSValue valueWithRect:NSMakeRect(         0,0.34*height,     width,0.34*height)]];
+      [array addObject:[NSValue valueWithRect:NSMakeRect(         0,0.67*height,     width,0.67*height)]];
+      [array addObject:[NSValue valueWithRect:NSMakeRect(0.34*width,          0,0.34*width,     height)]];      
+      [array addObject:[NSValue valueWithRect:NSMakeRect(0.67*width,          0,0.67*width,     height)]];
+      break;
+    case 3:
+      [array addObject:[NSValue valueWithRect:NSMakeRect(         0,0.67*height,     width,0.67*height)]];
+      [array addObject:[NSValue valueWithRect:NSMakeRect(0.34*width,0.67*height,0.34*width,     height)]];
+      [array addObject:[NSValue valueWithRect:NSMakeRect(0.67*width,0.67*height,0.67*width,     height)]];      
+      [array addObject:[NSValue valueWithRect:NSMakeRect( 0.5*width,          0, 0.5*width,0.67*height)]];
+      break;
+    case 4:
+      [array addObject:[NSValue valueWithRect:NSMakeRect(         0,0.34*height,     width,0.34*height)]];
+      [array addObject:[NSValue valueWithRect:NSMakeRect(0.34*width,          0,0.34*width,0.34*height)]];
+      [array addObject:[NSValue valueWithRect:NSMakeRect(0.67*width,          0,0.67*width,0.34*height)]];      
+      [array addObject:[NSValue valueWithRect:NSMakeRect( 0.5*width,0.34*height, 0.5*width,     height)]];
+      break;
+    case 5:
+      [array addObject:[NSValue valueWithRect:NSMakeRect(         0, 0.5*height,0.67*width, 0.5*height)]];
+      [array addObject:[NSValue valueWithRect:NSMakeRect(0.67*width,          0,0.67*width,     height)]];
+      [array addObject:[NSValue valueWithRect:NSMakeRect(0.67*width,0.34*height,     width,0.34*height)]];      
+      [array addObject:[NSValue valueWithRect:NSMakeRect(0.67*width,0.67*height,     width,0.67*height)]];
+      break;
+    default:
+      array = nil;
+      break;
+  }
+  return array;
+}
 
-+ (NSArray*) arrayCustomGridByVerticalNum:(NSInteger)verNum 
-                            withVerFirPer:(CGFloat)verFirPer 
-                            withVerSecPer:(CGFloat)verSecPer 
-                        withHorizontalNum:(NSInteger)horNum 
-                            withHorFirPer:(CGFloat)horFirPer 
-                            withHorSecPer:(CGFloat)horSecPer{
-//serial vertical point  
+
++ (NSArray*) arrayCustomGrid{
+  
+  NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+  
+  CGFloat verFirPer               = [userDefaults   floatForKey:kSGVerticalFirstPer];
+  CGFloat verSecPer               = [userDefaults   floatForKey:kSGVerticalSecondPer];
+  CGFloat horFirPer               = [userDefaults   floatForKey:kSGHorizontalFirstPer];
+  CGFloat horSecPer               = [userDefaults   floatForKey:kSGHorizontalSecondPer];
+  
+  
+  //serial vertical point  
   
   NSMutableArray *arrayVer = [NSMutableArray arrayWithObject:[NSNumber numberWithInteger:0]];
   if(verFirPer!=0)
@@ -125,7 +176,7 @@
     }
   }
   [arrayVer addObject:[NSNumber numberWithFloat:1]];
-//serial horizontal point  
+  //serial horizontal point  
   NSMutableArray *arrayHor = [NSMutableArray arrayWithObject:[NSNumber numberWithInteger:0]];
   if(horFirPer!=0)
     [arrayHor addObject:[NSNumber numberWithFloat:horFirPer]];
@@ -138,7 +189,7 @@
     }
   }
   [arrayHor addObject:[NSNumber numberWithFloat:1]];
-//construct grid array  
+  //construct grid array  
   NSMutableArray *array = [NSMutableArray array];
   for(NSInteger integerHor=0; integerHor<[arrayHor count]; integerHor++){
     for(NSInteger integerVer=0; integerVer<[arrayVer count]; integerVer++) {
@@ -156,6 +207,41 @@
       
     }
   }
+  return array;
+}
+
++ (NSArray*) arrayCustomGridPointsFromFrame:(NSRect)rect{
+  NSMutableArray *array = [NSMutableArray array];
+  CGFloat x = rect.origin.x;
+  CGFloat y = rect.origin.y;
+  CGFloat  width = rect.size.width;
+  CGFloat height = rect.size.height;
+  
+  NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+  
+  NSInteger iVerNum               = [userDefaults integerForKey:kSGVerticalNum];
+  CGFloat fVerFir               = [userDefaults   floatForKey:kSGVerticalFirstPer];
+  CGFloat fVerSec               = [userDefaults   floatForKey:kSGVerticalSecondPer];
+  NSInteger iHorNum               = [userDefaults integerForKey:kSGHorizontalNum];
+  CGFloat fHorFir               = [userDefaults   floatForKey:kSGHorizontalFirstPer];
+  CGFloat fHorSec               = [userDefaults   floatForKey:kSGHorizontalSecondPer];
+
+  // Ignoring clipRect because this isn't a lot of drawing
+  if (iHorNum>0) {
+    [array addObject:[NSValue valueWithRect:NSMakeRect(x, y+fHorFir*height, x, y+fHorFir*height)]];
+  }
+  if (iHorNum>1) {
+    [array addObject:[NSValue valueWithRect:NSMakeRect(x, y+fHorSec*height, x + width, y+fHorSec*height)]];
+  }
+  
+  if (iVerNum>0) {
+    [array addObject:[NSValue valueWithRect:NSMakeRect(x+fVerFir*width, y, x+fVerFir*width, y+height)]];
+  }
+  
+  if (iVerNum>1) {
+    [array addObject:[NSValue valueWithRect:NSMakeRect(x+fVerSec*width, y, x+fVerSec*width, y+height)]];
+  }
+
   return array;
 }
 @end

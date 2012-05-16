@@ -7,15 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ScreenGrids-Prefix.pch"
 #define TOP_BAR_HEIGHT 20
 @interface DataComputing : NSObject
 + (NSArray*) sizeOfGrids;
 
 + (NSArray*) arrayTemplateByNum:(NSInteger)integer;
-+ (NSArray*) arrayCustomGridByVerticalNum:(NSInteger)verNum 
-                            withVerFirPer:(CGFloat)verFirPer 
-                            withVerSecPer:(CGFloat)verSecPer 
-                        withHorizontalNum:(NSInteger)horNum 
-                            withHorFirPer:(CGFloat)horFirPer 
-                            withHorSecPer:(CGFloat)horSecPer;
++ (NSArray*) arrayTemplateGridPoints:(NSInteger)integer withRect:(NSRect)rect;
++ (NSArray*) arrayCustomGrid;
++ (NSArray*) arrayCustomGridPointsFromFrame:(NSRect)rect;
 @end

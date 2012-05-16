@@ -17,17 +17,6 @@
   NSInteger      iArrangementOption;
   NSInteger      iTemplateNum;
   
-  NSInteger iVerNum;
-  NSInteger iVerFirstSelection;
-  NSInteger iVerSecondSelection;
-  CGFloat   fVerFir;
-  CGFloat   fVerSec;
-  NSInteger iHorNum;
-  NSInteger iHorFirstSelection;
-  NSInteger iHorSecondSelection;
-  CGFloat   fHorFir;
-  CGFloat   fHorSec;
-  
   SGGridInfo *gridInfo;
 }
 
