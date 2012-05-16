@@ -74,14 +74,7 @@
 
 - (void) gridWindowInit{
   //Grid Window Initialize 
-  
-  NSRect rectOfBGWindow = [[[DataComputing sizeOfGrids] objectAtIndex:0] rectValue];  
-  
-  
-  [self.backgroundWindow.window setBackgroundColor:[NSColor colorWithCalibratedRed:0 green:1 blue:0 alpha:0.3f]]; 
-  [self.backgroundWindow.window setAlphaValue:0.3f];
-  [self.backgroundWindow.window setFrame:rectOfBGWindow display:YES animate:NO];
-  [self.backgroundWindow.window setIgnoresMouseEvents:YES];
+  [self.backgroundWindow initWindow];
   [self.backgroundWindow showWindow:nil];
 }
 
@@ -101,15 +94,15 @@
 //  NSLog(@"%@",str);
   [NSApp activateIgnoringOtherApps:YES];
   
-  NSLog(@"%f",self.backgroundWindow.window.frame.origin.x);
-  NSLog(@"%f",self.backgroundWindow.window.frame.origin.y);
-  NSLog(@"%f",self.backgroundWindow.window.frame.size.width);
-  NSLog(@"%f",self.backgroundWindow.window.frame.size.height);
+//  NSLog(@"%f",self.backgroundWindow.window.frame.origin.x);
+//  NSLog(@"%f",self.backgroundWindow.window.frame.origin.y);
+//  NSLog(@"%f",self.backgroundWindow.window.frame.size.width);
+//  NSLog(@"%f",self.backgroundWindow.window.frame.size.height);
   
-  NSSize size = [[self.backgroundWindow.window dockTile] size];
+//  NSSize size = [[self.backgroundWindow.window dockTile] size];
   
-  NSLog(@"%f",size.width);
-  NSLog(@"%f",size.height);
+//  NSLog(@"%f",size.width);
+//  NSLog(@"%f",size.height);
   [self gridWindowInit];
 
 }
@@ -144,7 +137,7 @@
   
   
   
-  NSLog(@"%@",emailString);
+//  NSLog(@"%@",emailString);
   NSAppleScript *emailScript = [[NSAppleScript alloc] initWithSource:emailString];
   [emailScript executeAndReturnError:nil];
 }

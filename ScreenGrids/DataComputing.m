@@ -10,35 +10,35 @@
 
 @implementation DataComputing
 + (NSArray*)sizeOfGrids{
-  NSRect mainFrame= [[NSScreen mainScreen] frame];
-  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask,YES);
-  NSString *documentDirectory = [paths objectAtIndex:0];
-  NSString *finalPath = [documentDirectory stringByAppendingPathComponent:@"Preferences/com.apple.dock.plist"];
-  NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithContentsOfFile: finalPath];
-  NSString *orientation = [dic valueForKey:@"orientation"];
-  CGFloat maxDockSize = [[dic valueForKey:@"largesize"] floatValue];
-  NSInteger dockAutoHide = [[dic valueForKey:@"autohide"] intValue];
-  
-  
-  CGRect rect;
-  if (dockAutoHide==0) {
-    CGFloat height = mainFrame.size.height 
-    - TOP_BAR_HEIGHT 
-    - ([orientation isEqualToString:@"bottom"]?maxDockSize:0);
-    CGFloat  width = mainFrame.size.width
-    - ([orientation isEqualToString:@"bottom"]?0:maxDockSize);
-    CGFloat      x = [orientation isEqualToString:@"left"]?maxDockSize:0;
-    CGFloat      y = [orientation isEqualToString:@"bottom"]?maxDockSize:0;//TOP_BAR_HEIGHT;
-    rect = CGRectMake(x, y, width, height);
-  }
-  else {
+    NSRect mainFrame= [[NSScreen mainScreen] frame];
+//  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask,YES);
+//  NSString *documentDirectory = [paths objectAtIndex:0];
+//  NSString *finalPath = [documentDirectory stringByAppendingPathComponent:@"Preferences/com.apple.dock.plist"];
+//  NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithContentsOfFile: finalPath];
+//  NSString *orientation = [dic valueForKey:@"orientation"];
+//  CGFloat maxDockSize = [[dic valueForKey:@"largesize"] floatValue];
+//  NSInteger dockAutoHide = [[dic valueForKey:@"autohide"] intValue];
+//  
+//  
+    CGRect rect;
+//  if (dockAutoHide==0) {
+//    CGFloat height = mainFrame.size.height 
+//    - TOP_BAR_HEIGHT 
+//    - ([orientation isEqualToString:@"bottom"]?maxDockSize:0);
+//    CGFloat  width = mainFrame.size.width
+//    - ([orientation isEqualToString:@"bottom"]?0:maxDockSize);
+//    CGFloat      x = [orientation isEqualToString:@"left"]?maxDockSize:0;
+//    CGFloat      y = [orientation isEqualToString:@"bottom"]?maxDockSize:0;//TOP_BAR_HEIGHT;
+//    rect = CGRectMake(x, y, width, height);
+//  }
+//  else {
     rect = CGRectMake(0, 
                       0, 
                       mainFrame.size.width, 
                       mainFrame.size.height-TOP_BAR_HEIGHT);
-  }
-  NSMutableArray * rectArray = [NSMutableArray arrayWithObject:[NSValue valueWithRect:rect]];
-  NSInteger screenCount = [[NSScreen screens] count];
+//  }
+    NSMutableArray * rectArray = [NSMutableArray arrayWithObject:[NSValue valueWithRect:rect]];
+    NSInteger screenCount = [[NSScreen screens] count];
   if (screenCount>1) {
     for (NSInteger integer = 1;integer<screenCount;integer++) {
       [rectArray addObject:[NSValue valueWithRect:[[[NSScreen screens] objectAtIndex:integer] frame]]];
@@ -156,10 +156,10 @@
   
   NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
   
-  CGFloat verFirPer               = [userDefaults   floatForKey:kSGVerticalFirstPer];
-  CGFloat verSecPer               = [userDefaults   floatForKey:kSGVerticalSecondPer];
-  CGFloat horFirPer               = [userDefaults   floatForKey:kSGHorizontalFirstPer];
-  CGFloat horSecPer               = [userDefaults   floatForKey:kSGHorizontalSecondPer];
+  CGFloat verFirPer = [userDefaults   floatForKey:kSGVerticalFirstPer];
+  CGFloat verSecPer = [userDefaults   floatForKey:kSGVerticalSecondPer];
+  CGFloat horFirPer = [userDefaults   floatForKey:kSGHorizontalFirstPer];
+  CGFloat horSecPer = [userDefaults   floatForKey:kSGHorizontalSecondPer];
   
   
   //serial vertical point  
@@ -228,7 +228,7 @@
 
   // Ignoring clipRect because this isn't a lot of drawing
   if (iHorNum>0) {
-    [array addObject:[NSValue valueWithRect:NSMakeRect(x, y+fHorFir*height, x, y+fHorFir*height)]];
+    [array addObject:[NSValue valueWithRect:NSMakeRect(x, y+fHorFir*height, x + width, y+fHorFir*height)]];
   }
   if (iHorNum>1) {
     [array addObject:[NSValue valueWithRect:NSMakeRect(x, y+fHorSec*height, x + width, y+fHorSec*height)]];
