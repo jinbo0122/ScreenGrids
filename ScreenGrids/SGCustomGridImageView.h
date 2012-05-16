@@ -21,4 +21,13 @@
       withHorizontalNum:(NSInteger)horNum 
           withHorFirPer:  (CGFloat)horFirPer 
           withHorSecPer:  (CGFloat)horSecPer;
+
+- (void)reloadGridImage;
 @end
+
+//@protocol SGCustomGridImageViewDelegate <NSObject>
+//
+//@required
+//- (void) customGridImageViewChange:(SGCustomGridImageView*)imageView;
+//
+//@end

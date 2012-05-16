@@ -131,9 +131,7 @@
   
   [gridArrangementStyleComboBox selectItemAtIndex:iArrangementOption];
   
-  customArrangementImageView = [[NSImageView alloc] initWithFrame:NSMakeRect(28, 95, 343, 212)];
-  customArrangementImageView.image = [NSImage imageNamed:@"customArrangement.png"];
-  customArrangementImageView.imageScaling = NSScaleToFit;
+
   
   [verticalNumComboBox        selectItemAtIndex:iVerNum];
   [horizontalNumComboBox      selectItemAtIndex:iHorNum];
@@ -142,7 +140,21 @@
   [horizontalProportionFirst  selectItemAtIndex:iHorFirstSelection];
   [horizontalProportionSecond selectItemAtIndex:iHorSecondSelection];
   
-  [customArrangementView addSubview:customArrangementImageView];
+  
+  customArrangementFrame = [[NSImageView alloc] initWithFrame:NSMakeRect(28, 95, 343, 212)];
+  customArrangementFrame.image = [NSImage imageNamed:@"customFrame.png"];
+  [customArrangementView addSubview:customArrangementFrame];
+  
+  customArrangementImageView = [[SGCustomGridImageView alloc] initWithFrame:NSMakeRect(24, 15, 297, 182)];
+  customArrangementImageView.image = [NSImage imageNamed:@"customArrangement.png"];
+  customArrangementImageView.imageScaling = NSScaleToFit;
+  [customArrangementImageView setVerticalNum:iVerNum 
+                               withVerFirPer:fVerFir 
+                               withVerSecPer:fVerSec 
+                           withHorizontalNum:iHorNum 
+                               withHorFirPer:fHorFir 
+                               withHorSecPer:fHorSec];
+  [customArrangementFrame addSubview:customArrangementImageView];
   
   
   templateImageView = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, 240, 150)];
@@ -258,6 +270,8 @@
       default:
         break;
     }
+    
+    [customArrangementImageView setIVerNum:iVerNum];
   }
   
   else if(comboBox == horizontalNumComboBox){
@@ -288,25 +302,31 @@
       default:
         break;
     }
+    [customArrangementImageView setIHorNum:iHorNum];
   }
   
   else if (comboBox == verticalProportionFirst) {
     iVerFirstSelection = [verticalProportionFirst indexOfSelectedItem];
     fVerFir = [[verticalProportionFirst objectValueOfSelectedItem] floatValue];
+    [customArrangementImageView setFVerFir:fVerFir];
   }
   else if (comboBox == verticalProportionSecond) {
     iVerSecondSelection = [verticalProportionSecond indexOfSelectedItem];
     fVerSec = [[verticalProportionSecond objectValueOfSelectedItem] floatValue];
+    [customArrangementImageView setFVerSec:fVerSec];
   }
   else if (comboBox == horizontalProportionFirst) {
     iHorFirstSelection = [horizontalProportionFirst indexOfSelectedItem];
     fHorFir = [[horizontalProportionFirst objectValueOfSelectedItem] floatValue];
+    [customArrangementImageView setFHorFir:fHorFir];
   }
   else if (comboBox == horizontalProportionSecond) {
     iHorSecondSelection = [horizontalProportionSecond indexOfSelectedItem];
     fHorSec = [[horizontalProportionSecond objectValueOfSelectedItem] floatValue];
+    [customArrangementImageView setFHorSec:fHorSec];
   }
-  
+  [customArrangementImageView removeFromSuperview];
+  [customArrangementFrame addSubview:customArrangementImageView];
   [self syncUserSettings];
 }
 #pragma mark -

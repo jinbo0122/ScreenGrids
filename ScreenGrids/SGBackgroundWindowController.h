@@ -7,16 +7,28 @@
 //
 
 #import <Cocoa/Cocoa.h>
-//#import "SGBackgroundAppearance.h"
-@interface SGBackgroundWindowController : NSWindowController
-{
-  NSColor *_frameColor;
-  NSColor *_bgColor;
+#import "SGGridInfo.h"
+@interface SGBackgroundWindowController : NSWindowController{
+  NSInteger      iBackgroundOption;
+  NSColor        *solidButtonColor;
+  NSImageView    *customBgImageView;
+  NSInteger      iFrameOption;
+  NSColor        *frameButtonColor;
+  NSInteger      iArrangementOption;
+  NSInteger      iTemplateNum;
   
-  NSInteger *_frameStyle;
-  NSImageView *_bgImage;
+  NSInteger iVerNum;
+  NSInteger iVerFirstSelection;
+  NSInteger iVerSecondSelection;
+  CGFloat   fVerFir;
+  CGFloat   fVerSec;
+  NSInteger iHorNum;
+  NSInteger iHorFirstSelection;
+  NSInteger iHorSecondSelection;
+  CGFloat   fHorFir;
+  CGFloat   fHorSec;
+  
+  SGGridInfo *gridInfo;
 }
 
-//@property (nonatomic, strong,readwrite) SGBackgroundAppearance *appearance;
-@property(nonatomic,strong)NSImageView *bgImage;
 @end

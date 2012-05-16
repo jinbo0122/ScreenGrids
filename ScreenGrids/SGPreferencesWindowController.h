@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "DBPrefsWindowController.h"
 #import "SGGridInfo.h"
+#import "SGCustomGridImageView.h"
 #define DEFAULT_TEMPLATE_NUM 6
 @interface SGPreferencesWindowController : DBPrefsWindowController<NSTableViewDataSource,NSTableViewDelegate,NSTabViewDelegate,NSComboBoxDelegate>
 {  
@@ -28,10 +29,11 @@
   IBOutlet NSButton *customImageBackgroundButton;
   IBOutlet NSButton *frameColorButton;
   
-  IBOutlet NSTableView *themeTableView;
-  IBOutlet NSView      *themeStandardView;
-           NSImageView *templateImageView;
-           NSImageView *customArrangementImageView; 
+  IBOutlet NSTableView  *themeTableView;
+  IBOutlet NSView       *themeStandardView;
+           NSImageView  *templateImageView;
+  NSImageView *customArrangementFrame;
+  SGCustomGridImageView *customArrangementImageView; 
   
   IBOutlet NSView     *customArrangementView;
   IBOutlet NSComboBox *verticalNumComboBox;
