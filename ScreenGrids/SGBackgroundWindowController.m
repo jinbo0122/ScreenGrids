@@ -85,6 +85,8 @@
     gridImageView = [[SGCustomGridImageView alloc] initWithFrame:rectOfBGWindow];
     gridImageView.imageScaling = NSScaleToFit;
     gridImageView.iForActualBg = 1;
+  
+//  NSAccessibilityWindowAttribute;
 
     [self.window.contentView addSubview:gridImageView];
 

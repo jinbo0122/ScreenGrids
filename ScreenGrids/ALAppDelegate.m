@@ -10,7 +10,7 @@
 
 @implementation ALAppDelegate
 
-@synthesize mainWindow,statusItem,mainMenu,hotKey,backgroundWindow;
+@synthesize mainWindow,statusItem,mainMenu,hotKey,backgroundWindow,eventMonitor;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -103,14 +103,45 @@
   
 //  NSLog(@"%f",size.width);
 //  NSLog(@"%f",size.height);
+//  NSPoint point = [NSEvent mouseLocation];
+//  NSLog(@"%f ... %f",point.x,point.y);
+//  NSLog(@"%lu",[NSEvent pressedMouseButtons]);
+  
   [self gridWindowInit];
+  [self beginEventMonitor];
 
 }
 - (void)deactivateScreenGrids{
-//  NSLog(@"%@",[[NSApp accessibilityAttributeNames] description]);
   [NSApp activateIgnoringOtherApps:YES];
   [self.backgroundWindow close];
+  [self stopEventMonitor];
   
+}
+
+
+-(void)beginEventMonitor{
+  eventMonitor = [NSEvent addGlobalMonitorForEventsMatchingMask:(NSLeftMouseUpMask)
+                                                         handler:^(NSEvent *incomingEvent) {
+                                                           NSLog(@"Got a mouse click event at %@", NSStringFromPoint([incomingEvent locationInWindow]));
+                                                           CGWindowID windowID = (CGWindowID)[incomingEvent windowNumber];
+                                                           CFArrayRef a = CFArrayCreate(NULL, (void *)&windowID, 1, NULL);
+                                                           NSArray *windowInfos = (__bridge NSArray *)CGWindowListCreateDescriptionFromArray(a);
+                                                           CFRelease(a);
+                                                           if ([windowInfos count] > 0) {
+                                                             NSDictionary *windowInfo = [windowInfos objectAtIndex:0];
+                                                             NSLog(@"Name:  %@", [windowInfo objectForKey:(NSString *)kCGWindowName]);
+                                                             NSLog(@"Owner: %@", [windowInfo objectForKey:(NSString *)kCGWindowOwnerName]);
+                                                             NSLog(@"Owner: %@", [windowInfo objectForKey:(NSString *)kCGWindowBounds]);
+                                                             //etc.
+                                                           }                                                  
+                                                         }];
+}
+
+-(void)stopEventMonitor {
+  if (eventMonitor) {
+    [NSEvent removeMonitor:eventMonitor];
+    eventMonitor = nil;
+  }
 }
 #pragma mark -
 #pragma mark Menu Clik Implement
