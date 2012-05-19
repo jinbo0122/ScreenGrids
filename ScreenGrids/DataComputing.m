@@ -337,4 +337,8 @@
   [[NSWorkspace sharedWorkspace] openURL:
    [NSURL URLWithString:@"http://weibo.com/leexd22/profile?leftnav=1&wvr=3.6"]];
 }
+
++ (CGFloat)getCarbonY:(CGFloat)y withHeight:(CGFloat)height{  
+  return y;
+}
 @end

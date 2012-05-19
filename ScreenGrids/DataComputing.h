@@ -23,4 +23,5 @@
 + (void)showErrorMessage;
 + (void)reportABug;
 + (void)openWebsite;
++ (CGFloat)getCarbonY:(CGFloat)y withHeight:(CGFloat)height;
 @end
