@@ -48,6 +48,7 @@
 		4B8A9F0D153BCFF200187E0D /* PTKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F08153BCFF200187E0D /* PTKeyCodeTranslator.m */; };
 		4B8A9F0E153BCFF200187E0D /* PTKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A9F0A153BCFF200187E0D /* PTKeyCombo.m */; };
 		4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B948381152EAE5F0051DC12 /* StatusBar.png */; };
+		4BB7AB9615679C9400B1B28B /* SGGridRearrange.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7AB9515679C9400B1B28B /* SGGridRearrange.m */; };
 		4BC993BF156362B30041A88F /* customArrangement.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC993BE156362B30041A88F /* customArrangement.png */; };
 		4BE16BFA155EC3F00088D59B /* tempBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BE16BF9155EC3F00088D59B /* tempBG.jpg */; };
 		4BEF5444153B28BF0065CB50 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEF5443153B28BF0065CB50 /* Carbon.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -125,6 +126,8 @@
 		4B8A9F09153BCFF200187E0D /* PTKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTKeyCombo.h; sourceTree = "<group>"; };
 		4B8A9F0A153BCFF200187E0D /* PTKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTKeyCombo.m; sourceTree = "<group>"; };
 		4B948381152EAE5F0051DC12 /* StatusBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusBar.png; path = Resource/StatusBar.png; sourceTree = "<group>"; };
+		4BB7AB9415679C9400B1B28B /* SGGridRearrange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGridRearrange.h; sourceTree = "<group>"; };
+		4BB7AB9515679C9400B1B28B /* SGGridRearrange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGridRearrange.m; sourceTree = "<group>"; };
 		4BC993BE156362B30041A88F /* customArrangement.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customArrangement.png; sourceTree = "<group>"; };
 		4BE16BF9155EC3F00088D59B /* tempBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tempBG.jpg; path = Resource/tempBG.jpg; sourceTree = "<group>"; };
 		4BEF5443153B28BF0065CB50 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
@@ -288,6 +291,8 @@
 				4B06ED6A1562B07C002DB58A /* SGCustomGridImageView.m */,
 				4B72E620153305FB00A8E1B5 /* DataComputing.h */,
 				4B72E621153305FB00A8E1B5 /* DataComputing.m */,
+				4BB7AB9415679C9400B1B28B /* SGGridRearrange.h */,
+				4BB7AB9515679C9400B1B28B /* SGGridRearrange.m */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -495,6 +500,7 @@
 				4B73ADA9153D528900954BB0 /* SGBackgroundWindowController.m in Sources */,
 				4B4B1DA7156147E700108B45 /* SGGridInfo.m in Sources */,
 				4B06ED6B1562B07C002DB58A /* SGCustomGridImageView.m in Sources */,
+				4BB7AB9615679C9400B1B28B /* SGGridRearrange.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

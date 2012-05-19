@@ -105,91 +105,11 @@
                                                           }
                                                           else {
                                                             NSRect rect = [DataComputing rectOfActualGridToTransform:iGrid];
-                                                            NSLog(@"%@",NSStringFromRect(rect));
-                                                            
-                                                            AXValueRef temp;
-                                                            CGSize windowSize;
-                                                            CGPoint windowPosition;
-                                                            CFStringRef windowTitle;
-                                                            AXUIElementRef frontMostApp;
-                                                            AXUIElementRef frontMostWindow;
-                                                            
-                                                            if (!amIAuthorized()) {
-                                                              printf("Can't use accessibility API!\n");
-                                                            }
-                                                            
-                                                            /* Here we go. Find out which process is front-most */
-                                                            frontMostApp = getFrontMostApp();
-                                                            
-                                                            /* Get the front most window. We could also get an array of all windows
-                                                             * of this process and ask each window if it is front most, but that is
-                                                             * quite inefficient if we only need the front most window.
-                                                             */
-                                                            AXUIElementCopyAttributeValue(
-                                                                                          frontMostApp, kAXFocusedWindowAttribute, (CFTypeRef *)&frontMostWindow
-                                                                                          );
-                                                            
-                                                            /* Get the title of the window */
-                                                            AXUIElementCopyAttributeValue(
-                                                                                          frontMostWindow, kAXTitleAttribute, (CFTypeRef *)&windowTitle
-                                                                                          );
-                                                            
-                                                            /* Get the window size and position */
-                                                            AXUIElementCopyAttributeValue(
-                                                                                          frontMostWindow, kAXSizeAttribute, (CFTypeRef *)&temp
-                                                                                          );
-                                                            AXValueGetValue(temp, kAXValueCGSizeType, &windowSize);
-                                                            CFRelease(temp);
-                                                            
-                                                            AXUIElementCopyAttributeValue(
-                                                                                          frontMostWindow, kAXPositionAttribute, (CFTypeRef *)&temp
-                                                                                          );
-                                                            AXValueGetValue(temp, kAXValueCGPointType, &windowPosition);
-                                                            CFRelease(temp);
-                                                            
-                                                            CGFloat getY = [NSScreen mainScreen].frame.size.height;
-                                                            
-                                                            windowPosition.x = rect.origin.x;
-                                                            windowPosition.y = getY - rect.size.height - rect.origin.y;
-                                                            windowSize.height = rect.size.height;
-                                                            windowSize.width = rect.size.width;
-                                                            temp = AXValueCreate(kAXValueCGPointType, &windowPosition);
-                                                            AXUIElementSetAttributeValue(frontMostWindow, kAXPositionAttribute, temp);
-                                                            
-                                                            temp = AXValueCreate(kAXValueCGSizeType, &windowSize);
-                                                            AXUIElementSetAttributeValue(frontMostWindow, kAXSizeAttribute, temp);
-                                                            
-                                                            CFRelease(temp);
-                                                            
-                                                            /* Clean up */
-                                                            CFRelease(frontMostWindow);
-                                                            CFRelease(frontMostApp);
+                                                            [SGGridRearrange reArrangeWithRect:rect];                                                         
                                                           }
-                                                          
-                                                          
-                                                          
                                                         }];
 }
-static bool amIAuthorized ()
-{
-  if (AXAPIEnabled() != 0) {
-    return true;
-  }
-  if (AXIsProcessTrusted() != 0) {
-    return true;
-  }
-  return false;
-}
 
-static AXUIElementRef getFrontMostApp ()
-{
-  pid_t pid;
-  ProcessSerialNumber psn;
-  
-  GetFrontProcess(&psn);
-  GetProcessPID(&psn, &pid);
-  return AXUIElementCreateApplication(pid);
-}
 
 
 -(void)stopEventMonitor {

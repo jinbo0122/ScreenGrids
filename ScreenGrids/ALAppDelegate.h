@@ -14,6 +14,7 @@
 #import "PTHotKey.h"
 #import "PTHotKeyCenter.h"
 #import "DataComputing.h"
+#import "SGGridRearrange.h"
 @interface ALAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (strong) NSStatusItem *statusItem;
