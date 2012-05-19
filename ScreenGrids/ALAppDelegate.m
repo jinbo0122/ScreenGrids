@@ -17,7 +17,7 @@
   // Insert code here to initialize your application
   [self menuInit];
   [self hotkeyInit]; 
-    
+  
   self.mainWindow = [[SGPreferencesWindowController alloc] initWithWindowNibName:@"SGPreferencesWindowController"];
   self.backgroundWindow = [[SGBackgroundWindowController alloc] initWithWindowNibName:@"SGBackgroundWindowController"];
 }
@@ -34,7 +34,7 @@
   [mainMenu addItemWithTitle:@"About ScreenGrids" 
                       action:@selector(aboutClick:) 
                keyEquivalent:@""];
-
+  
   [mainMenu addItem:[NSMenuItem separatorItem]];
   [mainMenu addItemWithTitle:@"Preferences" 
                       action:@selector(preferences:) 
@@ -83,33 +83,10 @@
 
 - (void)activateScreenGrids{
 
-//  NSAppleScript* playPause = [[NSAppleScript alloc] initWithSource:
-//                              @"tell application \"Safari\"\n"
-//                              @"if it is running then\n"
-//                              @"return URL of front document as string\n"
-//                              //@"set bounds of window 1 to {(2560 / 3), 0, 2560, 1440}"
-//                              @"end if\n"
-//                              @"end tell"];
-// NSString *str =  [[playPause executeAndReturnError:nil] stringValue];
-//  NSLog(@"%@",str);
   [NSApp activateIgnoringOtherApps:YES];
-  
-//  NSLog(@"%f",self.backgroundWindow.window.frame.origin.x);
-//  NSLog(@"%f",self.backgroundWindow.window.frame.origin.y);
-//  NSLog(@"%f",self.backgroundWindow.window.frame.size.width);
-//  NSLog(@"%f",self.backgroundWindow.window.frame.size.height);
-  
-//  NSSize size = [[self.backgroundWindow.window dockTile] size];
-  
-//  NSLog(@"%f",size.width);
-//  NSLog(@"%f",size.height);
-//  NSPoint point = [NSEvent mouseLocation];
-//  NSLog(@"%f ... %f",point.x,point.y);
-//  NSLog(@"%lu",[NSEvent pressedMouseButtons]);
-  
   [self gridWindowInit];
   [self beginEventMonitor];
-
+  
 }
 - (void)deactivateScreenGrids{
   [NSApp activateIgnoringOtherApps:YES];
@@ -121,21 +98,30 @@
 
 -(void)beginEventMonitor{
   eventMonitor = [NSEvent addGlobalMonitorForEventsMatchingMask:(NSLeftMouseUpMask)
-                                                         handler:^(NSEvent *incomingEvent) {
-                                                           NSLog(@"Got a mouse click event at %@", NSStringFromPoint([incomingEvent locationInWindow]));
-                                                           CGWindowID windowID = (CGWindowID)[incomingEvent windowNumber];
-                                                           CFArrayRef a = CFArrayCreate(NULL, (void *)&windowID, 1, NULL);
-                                                           NSArray *windowInfos = (__bridge NSArray *)CGWindowListCreateDescriptionFromArray(a);
-                                                           CFRelease(a);
-                                                           if ([windowInfos count] > 0) {
-                                                             NSDictionary *windowInfo = [windowInfos objectAtIndex:0];
-                                                             NSLog(@"Name:  %@", [windowInfo objectForKey:(NSString *)kCGWindowName]);
-                                                             NSLog(@"Owner: %@", [windowInfo objectForKey:(NSString *)kCGWindowOwnerName]);
-                                                             NSLog(@"Owner: %@", [windowInfo objectForKey:(NSString *)kCGWindowBounds]);
-                                                             //etc.
-                                                           }                                                  
-                                                         }];
+                                                        handler:^(NSEvent *incomingEvent) {
+                                                          NSLog(@"Got a mouse click event at %@", NSStringFromPoint([incomingEvent locationInWindow]));
+                                                          CGWindowID windowID = (CGWindowID)[incomingEvent windowNumber];
+                                                          CFArrayRef a = CFArrayCreate(NULL, (void *)&windowID, 1, NULL);
+                                                          NSArray *windowInfos = (__bridge NSArray *)CGWindowListCreateDescriptionFromArray(a);
+                                                          CFRelease(a);
+                                                          if ([windowInfos count] > 0) {
+                                                            NSDictionary *windowInfo = [windowInfos objectAtIndex:0];
+                                                            NSLog(@"Name:  %@", [windowInfo objectForKey:(NSString *)kCGWindowName]);
+                                                            NSLog(@"Owner: %@", [windowInfo objectForKey:(NSString *)kCGWindowOwnerName]);
+                                                            NSLog(@"Owner: %@", [windowInfo objectForKey:(NSString *)kCGWindowBounds]);
+                                                            //etc.
+                                                          } 
+                  NSInteger iGrid = [DataComputing mouseInGridNum:[incomingEvent locationInWindow]];
+                  if(iGrid==-1){                    
+                    [DataComputing showErrorMessage];
+                  }
+                  else {
+                    NSRect rect = [DataComputing rectOfActualGridToTransform:iGrid];
+                    NSLog(@"%@",NSStringFromRect(rect));
+                  }
+                  }];
 }
+
 
 -(void)stopEventMonitor {
   if (eventMonitor) {
@@ -152,25 +138,11 @@
 }
 
 - (IBAction) devWebsite:(id)sender{
-//  [NSApp openURL:[NSURL URLWithString:@"http://weibo.com/leexd22/profile?leftnav=1&wvr=3.6"]];
-  [[NSWorkspace sharedWorkspace] openURL:
-   [NSURL URLWithString:@"http://weibo.com/leexd22/profile?leftnav=1&wvr=3.6"]];
+  [DataComputing openWebsite];
 }
 
 - (IBAction)reportBug:(id)sender{
-  NSString *emailString = [NSString stringWithString:@"\
-                           tell application \"Mail\"\n activate\n\
-                           set newMessage to make new outgoing message with properties {subject:\"Report a bug on ScreenGrids\", content:\"\" & return} \n\
-                           tell newMessage\n\
-                           set visible to true\n\
-                           make new to recipient at end of to recipients with properties {name:\"Alber Lee Studio\", address:\"albert_leee@me.com\"}\n\
-                           end tell\n end tell"];
-  
-  
-  
-//  NSLog(@"%@",emailString);
-  NSAppleScript *emailScript = [[NSAppleScript alloc] initWithSource:emailString];
-  [emailScript executeAndReturnError:nil];
+  [DataComputing reportABug];
 }
 
 - (IBAction)preferences:(id)sender{

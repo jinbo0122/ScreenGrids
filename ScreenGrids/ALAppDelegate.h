@@ -10,6 +10,7 @@
 #import <Carbon/Carbon.h>
 #import "SGPreferencesWindowController.h"
 #import "SGBackgroundWindowController.h"
+#import "SGGridInfo.h"
 #import "PTHotKey.h"
 #import "PTHotKeyCenter.h"
 #import "DataComputing.h"
