@@ -7,7 +7,7 @@
 //
 
 #import "SGGridRearrange.h"
-
+#define kAnimationKey @"transitionViewAnimation"
 @implementation SGGridRearrange
 + (void)reArrangeWithRect:(NSRect)rect{
   AXValueRef temp;
@@ -41,14 +41,19 @@
   AXUIElementCopyAttributeValue(
                                 frontMostWindow, kAXSizeAttribute, (CFTypeRef *)&temp
                                 );
-  AXValueGetValue(temp, kAXValueCGSizeType, &windowSize);
-  CFRelease(temp);
+  if (temp!=nil&&frontMostWindow!=nil) {
+    AXValueGetValue(temp, kAXValueCGSizeType, &windowSize);
+    CFRelease(temp);
+  }
+  
   
   AXUIElementCopyAttributeValue(
                                 frontMostWindow, kAXPositionAttribute, (CFTypeRef *)&temp
                                 );
-  AXValueGetValue(temp, kAXValueCGPointType, &windowPosition);
-  CFRelease(temp);
+  if (temp!=nil&&frontMostWindow!=nil){
+    AXValueGetValue(temp, kAXValueCGPointType, &windowPosition);
+    CFRelease(temp);
+  }
   
   CGFloat getY = [NSScreen mainScreen].frame.size.height;
   
@@ -57,16 +62,34 @@
   windowSize.height = rect.size.height;
   windowSize.width = rect.size.width;
   temp = AXValueCreate(kAXValueCGPointType, &windowPosition);
-  AXUIElementSetAttributeValue(frontMostWindow, kAXPositionAttribute, temp);
+  if  (temp!=nil&&frontMostWindow!=nil){
+    AXUIElementSetAttributeValue(frontMostWindow, kAXPositionAttribute, temp);
+  }
   
   temp = AXValueCreate(kAXValueCGSizeType, &windowSize);
-  AXUIElementSetAttributeValue(frontMostWindow, kAXSizeAttribute, temp);
   
-  CFRelease(temp);
+  //  CATransition *animation = [CATransition animation];
+  //  [animation setDelegate:self];
+  //  [animation setType:kCATransitionPush];
+  //  [animation setSubtype:kCATransitionFromBottom];
+  //  [animation setDuration:0.5];
+  //  [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+  if  (temp!=nil&&frontMostWindow!=nil){
+    AXUIElementSetAttributeValue(frontMostWindow, kAXSizeAttribute, temp);
+  }
+  
+  //  [NSApp addAnimation:animation forKey:kAnimationKey];
+  if  (temp!=nil){
+    CFRelease(temp);
+  }
   
   /* Clean up */
-  CFRelease(frontMostWindow);
-  CFRelease(frontMostApp);
+  if (frontMostWindow!=nil){
+    CFRelease(frontMostWindow);
+  }
+  if (frontMostApp!=nil){
+    CFRelease(frontMostApp);
+  }
 }
 
 static bool amIAuthorized ()
