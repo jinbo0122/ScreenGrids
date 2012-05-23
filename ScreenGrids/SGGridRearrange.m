@@ -22,25 +22,26 @@
   }
   
   /* Here we go. Find out which process is front-most */
-  frontMostApp = getFrontMostApp();
+  frontMostApp = getFrontMostApp();  
   
   /* Get the front most window. We could also get an array of all windows
    * of this process and ask each window if it is front most, but that is
    * quite inefficient if we only need the front most window.
    */
-  AXUIElementCopyAttributeValue(
-                                frontMostApp, kAXFocusedWindowAttribute, (CFTypeRef *)&frontMostWindow
-                                );
+  AXUIElementCopyAttributeValue(frontMostApp, 
+                                kAXFocusedWindowAttribute, 
+                                (CFTypeRef *)&frontMostWindow);
   
   /* Get the title of the window */
-  AXUIElementCopyAttributeValue(
-                                frontMostWindow, kAXTitleAttribute, (CFTypeRef *)&windowTitle
-                                );
+  AXUIElementCopyAttributeValue(frontMostWindow, 
+                                kAXTitleAttribute, 
+                                (CFTypeRef *)&windowTitle);
   
   /* Get the window size and position */
-  AXUIElementCopyAttributeValue(
-                                frontMostWindow, kAXSizeAttribute, (CFTypeRef *)&temp
-                                );
+  AXUIElementCopyAttributeValue(frontMostWindow, 
+                                kAXSizeAttribute, 
+                                (CFTypeRef *)&temp);
+  
   if (temp!=nil&&frontMostWindow!=nil) {
     AXValueGetValue(temp, kAXValueCGSizeType, &windowSize);
     CFRelease(temp);
