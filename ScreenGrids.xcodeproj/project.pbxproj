@@ -51,6 +51,8 @@
 		4B948382152EAE5F0051DC12 /* StatusBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B948381152EAE5F0051DC12 /* StatusBar.png */; };
 		4BB7AB9615679C9400B1B28B /* SGGridRearrange.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB7AB9515679C9400B1B28B /* SGGridRearrange.m */; };
 		4BC993BF156362B30041A88F /* customArrangement.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC993BE156362B30041A88F /* customArrangement.png */; };
+		4BD0403215CF97AF0070EC8C /* Statusbar_alternate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BD0403015CF97AF0070EC8C /* Statusbar_alternate@2x.png */; };
+		4BD0403315CF97AF0070EC8C /* StatusBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BD0403115CF97AF0070EC8C /* StatusBar@2x.png */; };
 		4BEF5444153B28BF0065CB50 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BEF5443153B28BF0065CB50 /* Carbon.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		4BFAB6681532B441008042BB /* Statusbar_alternate.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFAB6671532B441008042BB /* Statusbar_alternate.png */; };
 /* End PBXBuildFile section */
@@ -130,6 +132,8 @@
 		4BB7AB9415679C9400B1B28B /* SGGridRearrange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGridRearrange.h; sourceTree = "<group>"; };
 		4BB7AB9515679C9400B1B28B /* SGGridRearrange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGridRearrange.m; sourceTree = "<group>"; };
 		4BC993BE156362B30041A88F /* customArrangement.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customArrangement.png; sourceTree = "<group>"; };
+		4BD0403015CF97AF0070EC8C /* Statusbar_alternate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Statusbar_alternate@2x.png"; path = "Resource/Statusbar_alternate@2x.png"; sourceTree = "<group>"; };
+		4BD0403115CF97AF0070EC8C /* StatusBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "StatusBar@2x.png"; path = "Resource/StatusBar@2x.png"; sourceTree = "<group>"; };
 		4BEF5443153B28BF0065CB50 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		4BFAB6671532B441008042BB /* Statusbar_alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Statusbar_alternate.png; path = Resource/Statusbar_alternate.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -332,7 +336,9 @@
 			children = (
 				4B72695F155EB133008F9B25 /* Template */,
 				4B948381152EAE5F0051DC12 /* StatusBar.png */,
+				4BD0403115CF97AF0070EC8C /* StatusBar@2x.png */,
 				4BFAB6671532B441008042BB /* Statusbar_alternate.png */,
+				4BD0403015CF97AF0070EC8C /* Statusbar_alternate@2x.png */,
 				4B472F8015371E1F00CF77E5 /* Advanced.png */,
 				4B72693F155E96E8008F9B25 /* Appearance.png */,
 				4B472F8115371E1F00CF77E5 /* Arrangement.png */,
@@ -387,7 +393,7 @@
 		4B4573D61504C1A2002BDEB4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "FileMaker,Inc";
 			};
 			buildConfigurationList = 4B4573D91504C1A2002BDEB4 /* Build configuration list for PBXProject "ScreenGrids" */;
@@ -454,6 +460,8 @@
 				4B72697D155EB8F0008F9B25 /* customFrame.png in Resources */,
 				4B4B1D8E15613B8300108B45 /* template_thumb_5.png in Resources */,
 				4BC993BF156362B30041A88F /* customArrangement.png in Resources */,
+				4BD0403215CF97AF0070EC8C /* Statusbar_alternate@2x.png in Resources */,
+				4BD0403315CF97AF0070EC8C /* StatusBar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,7 +587,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -600,7 +608,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -608,6 +616,7 @@
 		4B4574121504C1A3002BDEB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -624,6 +633,7 @@
 		4B4574131504C1A3002BDEB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -641,6 +651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ScreenGrids.app/Contents/MacOS/ScreenGrids";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScreenGrids/ScreenGrids-Prefix.pch";
@@ -655,6 +666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ScreenGrids.app/Contents/MacOS/ScreenGrids";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScreenGrids/ScreenGrids-Prefix.pch";

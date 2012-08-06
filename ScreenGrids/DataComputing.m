@@ -322,13 +322,13 @@
 }
 
 + (void)reportABug{
-  NSString *emailString = [NSString stringWithString:@"\
+  NSString *emailString = @"\
                            tell application \"Mail\"\n activate\n\
                            set newMessage to make new outgoing message with properties {subject:\"Report a bug on ScreenGrids\", content:\"\" & return} \n\
                            tell newMessage\n\
                            set visible to true\n\
                            make new to recipient at end of to recipients with properties {name:\"Alber Lee Studio\", address:\"albert_leee@me.com\"}\n\
-                           end tell\n end tell"];  
+                           end tell\n end tell";  
   NSAppleScript *emailScript = [[NSAppleScript alloc] initWithSource:emailString];
   [emailScript executeAndReturnError:nil];
 }

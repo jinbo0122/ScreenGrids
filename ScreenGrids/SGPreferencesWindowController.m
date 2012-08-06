@@ -141,7 +141,7 @@
   templateImageView = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, 240, 150)];
   [themeTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:iTemplateNum] byExtendingSelection:YES];
   [themeTableView scrollRowToVisible:iTemplateNum];
-  templateImageView.image = [NSImage imageNamed:[NSString stringWithFormat:@"template_%d",iTemplateNum]];
+  templateImageView.image = [NSImage imageNamed:[NSString stringWithFormat:@"template_%ld",iTemplateNum]];
   templateImageView.imageScaling = NSScaleToFit;
   
   [themeStandardView addSubview:templateImageView];
@@ -182,14 +182,14 @@
 #pragma mark -Table View Delegate
 - (NSView*)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row{
   NSImageView *imageView = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, 109, 100)];
-  imageView.image = [NSImage imageNamed:[NSString stringWithFormat:@"template_thumb_%d",row]];
+  imageView.image = [NSImage imageNamed:[NSString stringWithFormat:@"template_thumb_%ld",row]];
   imageView.imageScaling = NSScaleToFit;
   return imageView;
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification{
   iTemplateNum = [themeTableView selectedRow];
-  templateImageView.image = [NSImage imageNamed:[NSString stringWithFormat:@"template_%d",iTemplateNum]];
+  templateImageView.image = [NSImage imageNamed:[NSString stringWithFormat:@"template_%ld",iTemplateNum]];
   [self syncUserSettings];
   
   
